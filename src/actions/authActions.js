@@ -55,6 +55,7 @@ const FireBaseTools = {
             let uid = data && data.uid ? data.uid : null,
                 { type, email } = user,
                 today = new Date();
+            let updates = {};
 
             if(uid && type) {
                 switch(type) {
