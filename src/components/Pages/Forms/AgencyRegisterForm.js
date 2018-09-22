@@ -1,105 +1,53 @@
 import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { renderField } from '../../../utils/renderForms';
 
 class AgencyRegisterForm extends Component {
 
-    render() {
-        return (
-             <div>
-   <h1> Agency Registration </h1>
+  render() {
+    let { handleSubmit } = this.props;
 
+    return (
+      <form>
+        <fieldset className="o-fieldset">
+          <legend className="o-fieldset__legend">Agency Information</legend>
+          <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />
 
+          <Field component={renderField} name="agencyPhone" id="agencyPhone" type="tel" label="Agency Phone Number" cssMainClassName="" />
 
-   <label>
-      Name of Agency
-                          <i class="fas fa-user c-icon u-color-brand"></i>
-                          <input class ="c-field c-field--success" placeholder="Enter name of the Agency here" type="text" name="AgencyName" />
+          <Field component={renderField} name="agencyAddress.suite" id="agencyAddressSuite" type="text" label="label" cssMainClassName="" />
 
+          <Field component={renderField} name="agencyAddress.street" id="agencyStreet" type="text" label="Street" cssMainClassName="" />
 
-                            </label>
+          <Field component={renderField} name="agencyAddress.city" id="agencyAddressCity" type="text" label="Agency City" cssMainClassName="" />
 
-     <label>
-          Phone Number
-                             <i class="fas fa-user c-icon u-color-brand"></i>
-                             <input class ="c-field c-field--success" placeholder="Enter phone number of the Agency here" type="text" name="AgencyPhone" />
+          <Field component={renderField} name="agencyAddress.province" id="agencyAddressProvince" type="text" label="Province" cssMainClassName="" />
 
+          <Field component={renderField} name="agencyEmail" id="agencyEmail" type="email" label="Agency Email" cssMainClassName="" />
+        </fieldset>
 
-                               </label>
-     <label>
-         Suit Number
-                                 <i class="fas fa-user c-icon u-color-brand"></i>
-                                 <input class ="c-field c-field--success" placeholder="Enter suit number of the Agency here" type="text" name="SuitNumber" />
+        <fieldset className="o-fieldset">
+          <legend className="o-fieldset__legend">Social Worker</legend>
 
+          <Field component={renderField} name="agent.name" id="agentName" type="text" label="Agent Name" cssMainClassName="" />
 
-                                   </label>
-      <label>
-        Street
-          <i class="fas fa-user c-icon u-color-brand"></i>
-          <input class ="c-field c-field--success" placeholder="Enter the street the Agency is located here" type="text" name="Street" />
+          <Field component={renderField} name="agent.phone" id="agentPhone" type="te" label="Agent Phone Number" cssMainClassName="" />
 
+          <Field component={renderField} name="agent.password" id="agentPassword" type="password" label="Agent Password" cssMainClassName="" />
 
-                                        </label>
-      <label>
-             City
-               <i class="fas fa-user c-icon u-color-brand"></i>
-               <input class ="c-field c-field--success" placeholder="Enter the city the Agency is located here" type="text" name="City" />
+          <Field component={renderField} name="agent.verifyPassword" id="agentVerifyPassword" type="Verify Agent Password" label="label" cssMainClassName="" />
+        </fieldset>
 
-        </label>
-
-        <label>
-                  Province
-                       <i class="fas fa-user c-icon u-color-brand"></i>
-                       <input class ="c-field c-field--success" placeholder="Enter the province the Agency is located here" type="text" name="Province" />
-
-                </label>
-
-                    <label>
-                      Email
-                                         <i class="fas fa-user c-icon u-color-brand"></i>
-                                         <input class ="c-field c-field--success" placeholder="Enter email here" type="text" name="AgencyEmail" />
-
-
-                                           </label>
-
-                   <label>
-                   Name
-                                      <i class="fas fa-user c-icon u-color-brand"></i>
-                                      <input class ="c-field c-field--success" placeholder="Enter name here" type="text" name="Name" />
-
-
-                                        </label>
-
-
-                   <label>
-                      Personal Phone Number
-                                         <i class="fas fa-user c-icon u-color-brand"></i>
-                                         <input class ="c-field c-field--success" placeholder="Enter personal phone number of the Agency here" type="text" name="PAgencyPhone" />
-
-
-                                           </label>
-     <label>
-           Password
-                              <i class="fas fa-user c-icon u-color-brand"></i>
-                              <input class ="c-field c-field--success" placeholder="Enter password of the Agency here" type="text" name="AgencyPass" />
-
-
-                                </label>
-        <label>
-           Confirm Password
-                                  <i class="fas fa-user c-icon u-color-brand"></i>
-                                  <input class ="c-field c-field--success" placeholder="Enter password of the Agency again" type="text" name="AgencyPassAgain" />
-
-
-                                    </label>
- <hr></hr>
-
- <button name="Register">
-                   <font size = "5">
-                   <strong> Register</strong>
-                   </font>
-                   </button>
-            </div>
-        )
-    }
+        <button type="button">Register</button>
+      </form>
+    )
+  }
 }
+
+AgencyRegisterForm = reduxForm({
+  form: 'agencyRegForm',
+  enableReinitialize: true
+})(AgencyRegisterForm)
+
 
 export default AgencyRegisterForm;

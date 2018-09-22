@@ -9,7 +9,7 @@ class Login extends Component {
       this._submitLogin = this._submitLogin.bind(this)
     }
 
-    _submitLogIn(values) {
+    _submitLogin(values) {
         console.log('values')
     }
     
