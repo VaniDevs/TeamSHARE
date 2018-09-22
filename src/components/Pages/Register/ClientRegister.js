@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import LoginForm from '../Pages/Forms/LoginForm'
+import ClientRegisterForm from '../Forms/ClientRegisterForm';
 
 class Login extends Component {
     constructor(props){
@@ -12,7 +12,7 @@ class Login extends Component {
     _submitLogin(values) {
         console.log('values', values)
     }
-    
+
     render() {
         return (
             <LoginForm onSubmit={this._submitLogin} />
