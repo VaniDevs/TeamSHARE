@@ -1,0 +1,78 @@
+agency: {
+    $agencyId: {
+        address: {
+            suit:
+            street:
+            city: 
+            prov: 
+            postalCode: 
+        },
+        name: 
+        about: 
+        staff: {
+            $staffId: {
+                name
+                email
+                phone
+            }
+        },
+        status: 'approved',
+    }
+}
+
+agencyClients: {
+    $agencyId: {
+        $clientID: {
+            status: 'approved',
+            name: 
+            demographic
+            appointmentDate
+            phone
+            numItemsReq
+        },
+    }
+}
+
+allUsers: {
+    $uid: {
+        type: agency_emp, bgr_volunteer, bgr_manager
+    }
+}
+
+clients: {
+    $clientId: {
+        status: 'approved',
+        name: 
+        email:
+        demographic
+        potentialDate
+        phone
+        numItemsReq
+        dob
+        gender
+        baby: {
+            0: {
+                dob: 
+                name:
+                gender
+            }
+        }
+        appointedDate
+        history: {
+            appointmentId
+        }
+    }
+}
+
+volunteer: {
+    volunterId: {
+        name: 
+        phone:
+        availability:
+
+    }
+}
+
+inventory: {
+    
+}
