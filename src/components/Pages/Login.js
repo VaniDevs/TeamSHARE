@@ -10,7 +10,7 @@ class Login extends Component {
     }
 
     _submitLogin(values) {
-        console.log('values')
+        console.log('values', values)
     }
     
     render() {

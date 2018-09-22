@@ -1,61 +1,36 @@
 import React, { Component } from 'react';
-
+import { Field, reduxForm } from 'redux-form';
+import { renderField } from '../../../utils/renderForms';
 
 class VolunteerRegisterForm extends Component {
 
     render() {
+    let { handleSubmit } = this.props;
         return (
-        <div>
+
+<form onSubmit={handleSubmit}>
 
           <h1> VolunteerRegisterForm </h1>
 
-           <label>
-             Name
-                                <i class="fas fa-user c-icon u-color-brand"></i>
-                                <input class ="c-field c-field--success" placeholder="Enter name here" type="text" name="Name" />
+          <Field component={renderField} name="name" id="name" type="name" label="Name" />
+            <Field component={renderField} name="email" id="name" type="email" label="Email" />
+            <Field component={renderField} name="phoneNumber" id="phoneNumber" type="tel" label="Phonenumber" />
+            <Field component={renderField} name="password" id="password" type="password" label="Password" />
+            <Field component={renderField} name="verifyPassword" id="passWord" type="password" label="Verify Password" />
 
 
-                                  </label>
-         <label>
-              Email
-                                 <i class="fas fa-user c-icon u-color-brand"></i>
-                                 <input class ="c-field c-field--success" placeholder="Enter email of the Agency here" type="text" name="AgencyEmail" />
-
-
-                                   </label>
-         <label>
-                  Phone Number
-                                     <i class="fas fa-user c-icon u-color-brand"></i>
-                                     <input class ="c-field c-field--success" placeholder="Enter phone number of the Agency here" type="text" name="AgencyPhone" />
-
-
-                                       </label>
-          <label>
-                Password
-                                   <i class="fas fa-user c-icon u-color-brand"></i>
-                                   <input class ="c-field c-field--success" placeholder="Enter password of the Agency here" type="text" name="AgencyPass" />
-
-
-                                     </label>
-             <label>
-                Confirm Password
-                                       <i class="fas fa-user c-icon u-color-brand"></i>
-                                       <input class ="c-field c-field--success" placeholder="Enter password of the Agency again" type="text" name="AgencyPassAgain" />
-
-
-                                         </label>
      <hr></hr>
 
-     <button name="Register">
-                       <font size = "5">
-                       <strong> Register</strong>
-                       </font>
-                       </button>
+   <button type="submit">Register</button>
+ </form>
 
 
-        </div>
         )
     }
 }
+VolunteerRegisterForm = reduxForm({
+  form: 'VolunteerRegisterForm',
+  enableReinitialize: true
+})(VolunteerRegisterForm)
 
 export default VolunteerRegisterForm;
