@@ -1,0 +1,71 @@
+ul.b-card-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.b-card-list {
+  display: grid;
+  @include susy-clearfix();
+
+  &__item {    
+    display: inline-block;    
+    width: 100%;    
+    margin-bottom: gutter();
+    border: 1px solid $border-gray;
+    overflow: hidden;
+    
+    
+  } // end li for float fall back    
+
+  &--food {
+    .b-card-list__item {
+      border: none;
+    }
+  }
+
+   @supports (display: grid) {
+    &:before {
+      display: none; // override fall back
+    }
+
+    @media(min-width: 667px){
+      display: grid;
+      grid-gap: 16px 16px;    
+      grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));  
+    }      
+  }
+}
+
+.b-card {
+  text-align: center;
+
+  &__icon-container {
+    padding: span(1) gutter();    
+    background-color: $border-gray;
+    font-size: 3em;
+  }
+  
+  &__label {
+    padding: gutter()/2;    
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &--food .b-card__label {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 0.85em;
+
+    span {
+      flex: 0 1 100%;
+    }
+
+    .b-card__price {
+      text-align: right;
+    }    
+  }
+}

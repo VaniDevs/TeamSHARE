@@ -1,0 +1,32 @@
+.l-float {
+  @include susy-clearfix();
+  
+  .l-float-4-first {
+    @include span(4 first);
+  }
+
+  .l-float-4-last {
+    @include span(4 last);
+  }
+
+  .l-float-8-last {
+    @include span(8 last);
+  }
+
+  .l-float-8-first {
+    @include span(8 first);
+  } 
+}
+
+.b-detail {
+  margin-bottom: gutter()*2;
+
+  &__label {
+    margin-bottom: gutter();
+    font-family: $head-type;
+  }
+
+  &__value {
+    margin-left: 0;
+  }
+}
