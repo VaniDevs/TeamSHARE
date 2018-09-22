@@ -56,9 +56,9 @@ const MainRoutes = () => (
     <Switch>
         <Route exact path='/' component={Redirects}/>
         <Route path='/login' component={Login}/>
-        <Route path='/reg-agency' component={AgencyRegister}/>
-        <Route path='/reg-social-worker' component={SocialWorkerRegister}/>
-        <Route path='/reg-volunteer' component={VolunteerRegister}/>
+        <Route path='/register-agency' component={AgencyRegister}/>
+        <Route path='/register-agency-emp' component={SocialWorkerRegister}/>
+        <Route path='/register-volunteer' component={VolunteerRegister}/>
         <Route path='/dashboard' component={PrivateRoute} />
         {/* when none of the above match, <NoMatch> will be rendered */}
         <Route component={NotFound404}/>
