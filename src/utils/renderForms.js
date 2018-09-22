@@ -15,7 +15,7 @@ export const renderField = (field) => {
         type={field.type}
         id={field.id}
         value={value}
-        className={"b-field__input c-field"}
+        className={"c-field b-field__input"}
         disabled={disabled ? disabled : null}
         aria-invalid={touched && error ? 'true' : 'false'}
       />

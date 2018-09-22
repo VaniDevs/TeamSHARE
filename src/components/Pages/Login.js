@@ -1,35 +1,21 @@
 import React, { Component } from 'react';
 
-class Login extends Component {
+import LoginForm from '../Pages/Forms/LoginForm'
 
+class Login extends Component {
+    constructor(props){
+      super(props);
+
+      this._submitLogin = this._submitLogin.bind(this)
+    }
+
+    _submitLogin(values) {
+        console.log('values')
+    }
+    
     render() {
         return (
-             <div><h1> Login </h1>
-
-                     <label>
-                     Username
-                    <i class="fas fa-user c-icon u-color-brand"></i>
-                    <input class ="c-field c-field--success" placeholder="Enter username here" type="text" name="Username" />
-
-
-                      </label>
-
-                      <label>
-                      password
-                      <i class="fas fa-user c-icon u-color-brand"></i>
-                      <input class ="c-field c-field--success" type="text" placeholder="Enter password here" name="Password" />
-                     </label>
-                   <hr></hr>
-
-                   <button name="Submit">
-                   <font size = "5">
-                   <strong> Submit</strong>
-                   </font>
-                   </button>
-
-
-
-                        </div>
+            <LoginForm onSubmit={this._submitLogin} />
         )
     }
 }
