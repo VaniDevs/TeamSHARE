@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import ClientRegisterForm from './Forms/ClientRegisterForm';
 
-class Forms extends Component {
+class NewClient extends Component {
 
     render() {
         return (
-            <div>Forms
-     <ClientRegisterForm/>
-
-            </div>
+            <ClientRegisterForm />
         )
     }
 }
 
-export default Forms;
+export default NewClient;

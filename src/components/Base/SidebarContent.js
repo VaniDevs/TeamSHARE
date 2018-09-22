@@ -5,7 +5,7 @@ const SidebarContent = ({ match }) =>
         (
             <ul>
                 <li><Link to={`${match.url}/team`}>Team</Link></li>
-                <li><Link to={`${match.url}/forms`}>Agency</Link></li>
+                <li><Link to={`${match.url}/new-client`}>Agency</Link></li>
             </ul>
         )
 
