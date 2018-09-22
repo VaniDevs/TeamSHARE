@@ -52,8 +52,66 @@ const FireBaseTools = {
      */
       registerUser: user =>
         firebaseAuth.createUserWithEmailAndPassword(user.email, user.password).then((data) => {
+            let uid = data && data.uid ? data.uid : null,
+                { type, email } = user,
+                today = new Date();
 
-      }),
+            if(uid && type) {
+                switch(type) {
+                    case 'agency': {
+                        let agencyId = firebaseDb.ref(`agency/`).push().key;
+                        updates[`allUsers/${uid}`] = {
+                            type,
+                            agencyId,
+                            createdOn: today,
+                            status: 'active'
+                        };
+                        updates[`agency/${agencyId}`] = user.agency;
+                        break;
+                    }
+                    case 'agencyEmp': {
+                        updates[`agency/${user.agencyId}/staff/${uid}`] = {
+                            name: user.name,
+                            email: user.email,
+                            phone: user.phone,
+                            status: 'active',
+                            createdOn: today
+                        }
+                        updates[`allUsers/${uid}`] = {
+                            type,
+                            createdOn: new Date(),
+                            status: 'active'
+                        };
+                        break;
+                    }
+                    case 'volunteer': {
+                        updates[`volunteer/${uid}`] = {
+                            name: user.name,
+                            phone: user.phone,
+                            availability: null
+                        }
+                        updates[`allUsers/${uid}`] = {
+                            type,
+                            createdOn: new Date(),
+                            status: 'active'
+                        };
+                        break;
+                    }
+                    case 'admin': {
+                        // not implementing right now
+                        updates[`allUsers/${uid}`] = {
+                            type,
+                            createdOn: new Date(),
+                            status: 'active'
+                        };
+                        break; 
+                    }
+                    default: 
+                        return;
+                }
+            }
+        }
+      ),
     /**
      * Log the user in using email and password
      *
@@ -62,7 +120,7 @@ const FireBaseTools = {
      */
       loginUser: user => firebaseAuth.signInWithEmailAndPassword(user.email, user.password)
       .then(userInfo => {
-        return (userInfo !== null) ? FireBaseTools.findAllInfo(userInfo) :  {user: null, userInfo:null, companyInfo: null, name: null, companyPlan: null};
+        return firebaseDb.ref(`allUsers/${userInfo.uid}`).once('value').then(snap => snap.val())
       }).catch(error => ({
           errorCode: error.code,
           errorMessage: error.message,
