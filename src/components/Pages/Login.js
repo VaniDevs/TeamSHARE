@@ -21,7 +21,7 @@ class Login extends Component {
                      </label>
                    <hr></hr>
 
-                   <button name="submit">
+                   <button name="Submit">
                    <font size = "5">
                    <strong> Submit</strong>
                    </font>
