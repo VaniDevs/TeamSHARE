@@ -45,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Register.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Register.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Pages/Register.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgencyRegisterForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AgencyRegisterForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Pages/Forms/AgencyRegisterForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="96" selection-end-column="28" />
+            <state relative-caret-position="214">
+              <caret line="57" column="107" lean-forward="false" selection-start-line="57" selection-start-column="107" selection-end-line="57" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -111,15 +111,15 @@
         <option value="$PROJECT_DIR$/src/components/Pages/Forms/Login.js" />
         <option value="$PROJECT_DIR$/src/components/Routes/AppRoutes.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/Login.js" />
-        <option value="$PROJECT_DIR$/src/components/Pages/Forms/AgencyRegisterForm.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/Forms/VolunteerRegisterForm.js" />
         <option value="$PROJECT_DIR$/src/components/Pages/Register.js" />
+        <option value="$PROJECT_DIR$/src/components/Pages/Forms/AgencyRegisterForm.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="142" />
-    <option name="y" value="204" />
+    <option name="x" value="64" />
+    <option name="y" value="295" />
     <option name="width" value="1416" />
     <option name="height" value="812" />
   </component>
@@ -512,7 +512,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="142" y="204" width="1416" height="812" extended-state="0" />
+    <frame x="64" y="295" width="1416" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -606,14 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Pages/Forms/AgencyRegisterForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="96" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Pages/Forms/VolunteerRegisterForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -626,6 +618,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Pages/Forms/AgencyRegisterForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="57" column="107" lean-forward="false" selection-start-line="57" selection-start-column="107" selection-end-line="57" selection-end-column="107" />
           <folding />
         </state>
       </provider>

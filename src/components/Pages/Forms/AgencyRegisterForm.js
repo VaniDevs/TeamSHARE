@@ -7,30 +7,7 @@ class AgencyRegisterForm extends Component {
              <div>
    <h1> Agency Registration </h1>
 
-      <label>
-      Email
-                         <i class="fas fa-user c-icon u-color-brand"></i>
-                         <input class ="c-field c-field--success" placeholder="Enter email of the Agency here" type="text" name="AgencyEmail" />
 
-
-                           </label>
-
-   <label>
-   Name
-                      <i class="fas fa-user c-icon u-color-brand"></i>
-                      <input class ="c-field c-field--success" placeholder="Enter name here" type="text" name="Name" />
-
-
-                        </label>
-
-
-   <label>
-      Personal Phone Number
-                         <i class="fas fa-user c-icon u-color-brand"></i>
-                         <input class ="c-field c-field--success" placeholder="Enter personal phone number of the Agency here" type="text" name="PAgencyPhone" />
-
-
-                           </label>
 
    <label>
       Name of Agency
@@ -40,20 +17,6 @@ class AgencyRegisterForm extends Component {
 
                             </label>
 
-    <label>
-       Password
-                          <i class="fas fa-user c-icon u-color-brand"></i>
-                          <input class ="c-field c-field--success" placeholder="Enter password of the Agency here" type="text" name="AgencyPass" />
-
-
-                            </label>
-    <label>
-       Confirm Password
-                              <i class="fas fa-user c-icon u-color-brand"></i>
-                              <input class ="c-field c-field--success" placeholder="Enter password of the Agency again" type="text" name="AgencyPassAgain" />
-
-
-                                </label>
      <label>
           Phone Number
                              <i class="fas fa-user c-icon u-color-brand"></i>
@@ -88,6 +51,45 @@ class AgencyRegisterForm extends Component {
                        <input class ="c-field c-field--success" placeholder="Enter the province the Agency is located here" type="text" name="Province" />
 
                 </label>
+
+                    <label>
+                      Email
+                                         <i class="fas fa-user c-icon u-color-brand"></i>
+                                         <input class ="c-field c-field--success" placeholder="Enter email here" type="text" name="AgencyEmail" />
+
+
+                                           </label>
+
+                   <label>
+                   Name
+                                      <i class="fas fa-user c-icon u-color-brand"></i>
+                                      <input class ="c-field c-field--success" placeholder="Enter name here" type="text" name="Name" />
+
+
+                                        </label>
+
+
+                   <label>
+                      Personal Phone Number
+                                         <i class="fas fa-user c-icon u-color-brand"></i>
+                                         <input class ="c-field c-field--success" placeholder="Enter personal phone number of the Agency here" type="text" name="PAgencyPhone" />
+
+
+                                           </label>
+     <label>
+           Password
+                              <i class="fas fa-user c-icon u-color-brand"></i>
+                              <input class ="c-field c-field--success" placeholder="Enter password of the Agency here" type="text" name="AgencyPass" />
+
+
+                                </label>
+        <label>
+           Confirm Password
+                                  <i class="fas fa-user c-icon u-color-brand"></i>
+                                  <input class ="c-field c-field--success" placeholder="Enter password of the Agency again" type="text" name="AgencyPassAgain" />
+
+
+                                    </label>
  <hr></hr>
 
  <button name="Register">
