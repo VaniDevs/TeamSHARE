@@ -2,13 +2,36 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { renderField } from '../../../utils/renderForms';
 
+import Validator from 'validatorjs';
+
+export const validate = (values) => {
+  const rules = {
+  }
+
+  const errorMsg = {
+  }
+
+  const validator = new Validator(values, rules, errorMsg)
+  validator.passes();
+
+  const extraValidation = (values) => {
+    const errors = {}
+    return errors
+  }
+
+  return {
+    ...extraValidation(values),
+    ...validator.errors.all()
+  }
+}
+
 class AgencyRegisterForm extends Component {
 
   render() {
     let { handleSubmit } = this.props;
 
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Agency Information</legend>
           <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />
@@ -38,7 +61,9 @@ class AgencyRegisterForm extends Component {
           <Field component={renderField} name="agent.verifyPassword" id="agentVerifyPassword" type="Verify Agent Password" label="label" cssMainClassName="" />
         </fieldset>
 
-        <button type="button">Register</button>
+        <Field component={renderField} name="terms" id="terms" type="checkbox" terms={true} cssMainClassName="" />
+
+        <button type="submit">Register</button>
       </form>
     )
   }
@@ -46,7 +71,8 @@ class AgencyRegisterForm extends Component {
 
 AgencyRegisterForm = reduxForm({
   form: 'agencyRegForm',
-  enableReinitialize: true
+  enableReinitialize: true,
+  validate
 })(AgencyRegisterForm)
 
 
