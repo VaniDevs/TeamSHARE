@@ -5,6 +5,7 @@ import Forms from '../Pages/Forms';
 import Team from '../Pages/Team';
 import NotFound404 from '../Pages/NotFound404';
 
+
 const SwitchRoutes = ({ match }) => {
     if(match && match.params && match.params.dashboardPage) {
         switch(match.params.dashboardPage) {
@@ -14,6 +15,7 @@ const SwitchRoutes = ({ match }) => {
             case 'team': {
                 return <Team />
             }
+
         }
     }
     return <NotFound404 />;
