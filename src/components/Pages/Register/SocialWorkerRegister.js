@@ -22,10 +22,6 @@ constructor(props){
   }
 }
 
-SocialWorkerRegister = reduxForm({
-  form: 'SocialWorkerRegister',
-  enableReinitialize: true
-})(SocialWorkerRegister)
 
 
 export default SocialWorkerRegister;

@@ -3,8 +3,9 @@ import { Field, reduxForm } from 'redux-form';
 import {renderField} from '../../../utils/renderForms';
 class ClientRegisterForm extends Component {
   render() {
+  let { handleSubmit } = this.props;
     return (
-     <form>
+     <form onSubmit={handleSubmit}>
      <h4>ClientRegisterForm </h4>
      <Field component={renderField} name="name" id="name" type="text" label="Name" />
      <Field component={renderField} name="email" id="email" type="text" label="Email" />
@@ -40,7 +41,7 @@ class ClientRegisterForm extends Component {
 
 <Field component={renderField} name="potentialAppointmentDate" id="potentialAppointmentDate" type="datetime" label="Potential Appointment Date" />
 
-
+<button type="submit">Register</button>
 
 
      

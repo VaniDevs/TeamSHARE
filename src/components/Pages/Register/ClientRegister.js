@@ -2,22 +2,27 @@ import React, { Component } from 'react';
 
 import ClientRegisterForm from '../Forms/ClientRegisterForm';
 
-class Login extends Component {
+class ClientRegister extends Component {
     constructor(props){
       super(props);
 
-      this._submitLogin = this._submitLogin.bind(this)
+      this._submitForm = this._submitForm.bind(this)
     }
 
-    _submitLogin(values) {
+    _submitForm(values) {
         console.log('values', values)
     }
 
     render() {
-        return (
-            <LoginForm onSubmit={this._submitLogin} />
+   // let { handleSubmit } = this.props;
+    }
+
+                  return (
+                    <ClientRegisterForm onSubmit={handleSubmit}>
+
+           // <ClientRegisterForm onSubmit={this._submitLogin} />
         )
     }
 }
 
-export default Login;
+export default ClientRegister;

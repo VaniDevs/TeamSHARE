@@ -8,7 +8,7 @@ class AgencyRegisterForm extends Component {
     let { handleSubmit } = this.props;
 
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Agency Information</legend>
           <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />
@@ -31,14 +31,14 @@ class AgencyRegisterForm extends Component {
 
           <Field component={renderField} name="agent.name" id="agentName" type="text" label="Agent Name" cssMainClassName="" />
 
-          <Field component={renderField} name="agent.phone" id="agentPhone" type="te" label="Agent Phone Number" cssMainClassName="" />
+          <Field component={renderField} name="agent.phone" id="agentPhone" type="text" label="Agent Phone Number" cssMainClassName="" />
 
           <Field component={renderField} name="agent.password" id="agentPassword" type="password" label="Agent Password" cssMainClassName="" />
 
-          <Field component={renderField} name="agent.verifyPassword" id="agentVerifyPassword" type="Verify Agent Password" label="label" cssMainClassName="" />
+          <Field component={renderField} name="agent.verifyPassword" id="agentPassword" type="password" label="Verify Password" cssMainClassName="" />
         </fieldset>
 
-        <button type="button">Register</button>
+        <button type="submit">Register</button>
       </form>
     )
   }
