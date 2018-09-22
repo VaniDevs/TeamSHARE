@@ -52,14 +52,17 @@ const FireBaseTools = {
      */
       registerUser: user =>
         firebaseAuth.createUserWithEmailAndPassword(user.email, user.password).then((data) => {
-            let uid = data && data.uid ? data.uid : null,
+            let uid = data && data.user && data.user.uid ? data.user.uid : null,
                 { type, email } = user,
-                today = new Date();
+                today = new Date(),
+                name = "";
             let updates = {};
-
+            console.log('data', data);
+            console.log('user', user)
             if(uid && type) {
                 switch(type) {
                     case 'agency': {
+                        name = user.agent && user.agent.name ? user.agent.name : null;
                         let agencyId = firebaseDb.ref(`agency/`).push().key;
                         updates[`allUsers/${uid}`] = {
                             type,
@@ -67,7 +70,20 @@ const FireBaseTools = {
                             createdOn: today,
                             status: 'active'
                         };
-                        updates[`agency/${agencyId}`] = user.agency;
+                        updates[`agency/${agencyId}`] = {
+                            address: user && user.agencyAddress ? user.agencyAddress : null, 
+                            name: user && user.agencyName ? user.agencyName : null, 
+                            phone: user && user.agencyPhone ? user.agencyPhone : null,
+                            staff: {
+                                [uid]: {
+                                    phone: user && user.agent & user.agent.phone ? user.agent.phone : null,
+                                    name,
+                                    email,
+                                    status: 'active'
+                                }
+                            },
+                            status: 'active'
+                        };
                         break;
                     }
                     case 'agencyEmp': {
@@ -106,10 +122,16 @@ const FireBaseTools = {
                             status: 'active'
                         };
                         break; 
-                    }
+                   }
                     default: 
-                        return;
+                        return null;
                 }
+                
+                let currUser = firebaseAuth.currentUser;
+                return currUser.updateProfile({ displayName: name }).then(() => {
+                    return firebaseDb.ref().update(updates);
+                }).then(() => { return { uid: data.uid, ...user } 
+                }).catch(err => { console.log('error', err); return err; });
             }
         }
       ),

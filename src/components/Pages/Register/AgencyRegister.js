@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { registerUser } from '../../../actions/authActions';
-
+import { withRouter } from 'react-router'
 class Register extends Component {
     constructor(props){
       super(props)
@@ -15,11 +15,15 @@ class Register extends Component {
 
     registerAgency(values) {
         console.log('values', values);
-
-        // this.props.registerUser({
-        //     type: 'agency'
-      
-        // })
+        
+        this.props.registerUser({
+            type: 'agency',
+            ...values
+        }).then(ret => {
+            if(ret && ret.payload && !ret.payload.error) {
+                this.props.history.push('/dashboard')
+            }
+        })
     }
     
     render() {
@@ -42,4 +46,4 @@ function mapStateToProps(state) {
     return { };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Register));

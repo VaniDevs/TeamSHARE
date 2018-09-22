@@ -5,10 +5,14 @@ import { renderField } from '../../../utils/renderForms';
 import { normalizePhone } from '../../../utils/helper';
 
 class AgencyRegisterForm extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     let { handleSubmit } = this.props;
+
     return (
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Agency Information</legend>
           <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />
@@ -23,22 +27,24 @@ class AgencyRegisterForm extends Component {
 
           <Field component={renderField} name="agencyAddress.province" id="agencyAddressProvince" type="text" label="Province" cssMainClassName="" />
 
-          <Field component={renderField} name="agencyEmail" id="agencyEmail" type="email" label="Agency Email" cssMainClassName="" />
+          <Field component={renderField} name="agencyAddress.postalCode" id="agencyPostalCode" type="text" label="Postal Code" cssMainClassName="" />
+
         </fieldset>
 
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Social Worker</legend>
+          <Field component={renderField} name="email" id="email" type="email" label="Agent Email" cssMainClassName="" />
 
           <Field component={renderField} name="agent.name" id="agentName" type="text" label="Agent Name" cssMainClassName="" />
 
-          <Field component={renderField} name="agent.phone" id="agentPhone" type="text" label="Agent Phone Number" cssMainClassName="" />
+          <Field component={renderField} name="agent.phone" id="agentPhone" type="text" label="Agent Phone Number" cssMainClassName="" normalize={normalizePhone} />
 
-          <Field component={renderField} name="agent.password" id="agentPassword" type="password" label="Agent Password" cssMainClassName="" />
+          <Field component={renderField} name="password" id="agentPassword" type="password" label="Agent Password" cssMainClassName="" />
 
-          <Field component={renderField} name="agent.verifyPassword" id="agentVerifyPassword" type="Verify Agent Password" label="Verify Agent Password" cssMainClassName="" />
+          <Field component={renderField} name="verifyPassword" id="agentVerifyPassword" type="password" label="Verify Agent Password" cssMainClassName="" />
         </fieldset>
 
-        <button type="button">Register</button>
+        <button type="submit">Register</button>
       </form>
     )
   }
