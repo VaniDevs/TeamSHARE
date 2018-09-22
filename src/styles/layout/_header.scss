@@ -1,0 +1,33 @@
+.b-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  // border-bottom: 1px solid $border-gray;  
+
+  .l-header-left {
+    flex: 1 100%;
+  }
+
+  &-nav {
+    flex: 1 25%;        
+  }
+
+  &-navlist {    
+    display: flex;        
+    justify-content: space-around;
+    flex-flow: row nowrap;        
+    margin-right: gutter();
+    padding: gutter();    
+  }
+
+  &-navlist__item {        
+    // font-size: 1.5em;    
+    margin: 0 gutter();
+  }
+
+  &-navlist__link {
+    display: inline-block;
+    padding: span(1);
+  } 
+}

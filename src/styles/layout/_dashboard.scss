@@ -1,0 +1,43 @@
+.l-container {
+  @include container();  
+  overflow: auto !important;
+
+  .l-sidebar-container {    
+    @include span(6 first);          
+    padding: gutter()/2 span(1)/3;
+    background-color: $brand-lightgray;
+  }  
+
+  /* Responsive Layout */
+    @media (min-width: 768px) {
+    .l-sidebar-container {
+      position: fixed !important;
+      @include span(3 first);      
+    }
+
+    .l-outer-main {
+      position: static !important;
+      @include span(9 last);      
+    }    
+  }
+  @media (min-width: 1440px) {
+    .l-sidebar-container {
+      position: fixed !important;
+      @include span(2 first);      
+    }
+
+    .l-outer-main {
+      position: static !important;
+      @include span(10 last);      
+    }        
+  }
+  
+  .b-main { 
+    padding: gutter();
+    min-height: calc(100vh - 70px);
+  }  
+
+  .b-footer {
+    height: 50px;
+  }
+}
