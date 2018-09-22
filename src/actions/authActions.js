@@ -120,7 +120,7 @@ const FireBaseTools = {
      */
       loginUser: user => firebaseAuth.signInWithEmailAndPassword(user.email, user.password)
       .then(userInfo => {
-        return firebaseDb.ref(`allUsers/${userInfo.uid}`).once('value').then(snap => snap.val())
+        return userInfo;
       }).catch(error => ({
           errorCode: error.code,
           errorMessage: error.message,
