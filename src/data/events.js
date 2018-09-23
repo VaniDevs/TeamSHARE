@@ -38,7 +38,7 @@ export default [
   },
   {
     "id": "40-625-9202",
-    "title": "Quercus \u00d7incomita Palmer",
+    "title": "Quercus incomita Palmer",
     "firstName": "Anatola",
     "lastName": "Doley",
     "phoneNumber": "(537) 9381787",
@@ -77,7 +77,7 @@ export default [
     "end": new Date(2018, 8, 18, 12, 30)
   },
   {
-    "id": "56-300-7451",
+    "id": "56-30-7451",
     "title": "Lobelia yuccoides Hillebr.",
     "firstName": "Obediah",
     "lastName": "Bennison",
