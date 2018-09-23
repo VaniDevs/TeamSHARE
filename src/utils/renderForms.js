@@ -38,9 +38,9 @@ export const renderField = (field) => {
           <span className="b-control__indicator" />
           {field.terms ?
             <span className="b-control__label">
-              <span>I have read and agree to the</span> <a href="#" onClick={field.tocAction} className="btn-text">terms and conditions</a></span>
+              <span style={{ marginLeft: '0.5em' }}>I have read and agree to the</span> <a href="#" onClick={field.tocAction} className="btn-text">terms and conditions</a></span>
             :
-            <span className="b-control__label b-checkbox__label">{field.label}</span>
+            <span className="b-control__label b-checkbox__label" style={{ marginLeft: '0.5em' }}>{field.label}</span>
           }
         </label>
         {touched && ((error && <span className="b-field__error">{error}</span>))}

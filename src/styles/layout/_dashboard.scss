@@ -38,6 +38,18 @@ body {
       @include span(10 last);      
     }        
   }
+
+  .l-center-container {
+    @media (min-width: 768px) {
+      width: span(7);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1440px) {
+      width: span(5);
+      margin: 0 auto;
+    }
+  }
   
   .b-main { 
     padding: gutter();

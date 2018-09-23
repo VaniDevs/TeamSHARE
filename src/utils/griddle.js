@@ -11,9 +11,13 @@ export class GriddleLayout extends Component {
     return (
       <div>
         <div className={`sort-settings sort-cards clearfix`}>
-          <div className="pull-right">
-            <Filter />
-            <SettingsWrapper />
+          <div className="o-grid">
+            <div class="o-grid__cell o-grid__cell--width-50">
+              <Filter />
+            </div>
+            <div class="o-grid__cell o-grid__cell--width-10 o-grid__cell--offset-40">
+              <SettingsWrapper />
+            </div>
           </div>
         </div>
         <Table />
@@ -41,7 +45,7 @@ const pageSizeSettings = ({ pageSizes }, changeHandler) =>
     return (
       <label className="griddle-pagesize form-inline">
         <span>Show</span>
-        <select onChange={onChange} defaultValue={pageSize} className="form-control">
+        <select onChange={onChange} defaultValue={pageSize} className="c-field">
           {pageSizes.map(s => <option key={s}>{s}</option>)}
         </select>
       </label>
@@ -84,8 +88,8 @@ export const Filter = (props) => {
   return (
     <div className="griddle-filters form-inline">
       <label className="griddle-search">
-        <span className="sr-only">Search Employees</span>
-        <input type="text" name="filter" onChange={onInputChange} placeholder="Search" className="form-control" />
+        <span className="sr-only">Search</span>
+        <input type="text" name="filter" onChange={onInputChange} placeholder="Search" className="c-field" />
       </label>
     </div>
   );
