@@ -111,7 +111,7 @@ class Agencies extends Component {
                             Cell: 'griddle-cell c-table__cell',
                             PageDropdown: 'griddle-page-select c-field',
                             NextButton: "griddle-next-button c-button",
-                            Pagination: "griddle-pagination c-field",
+                            Pagination: "griddle-pagination b-field",
                             PreviousButton: "griddle-previous-button c-button",
                         }
                     }}
