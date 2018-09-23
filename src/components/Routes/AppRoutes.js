@@ -5,6 +5,13 @@ import NewClient from '../Pages/NewClient';
 import Team from '../Pages/Team';
 import NotFound404 from '../Pages/NotFound404';
 
+import Clients from '../Pages/Clients';
+import Agencies from '../Pages/Agencies';
+import AgencyProfile from '../Pages/AgencyProfile';
+import Employees from '../Pages/Employees';
+import Calendar from '../Pages/Calendar';
+import Inventory from '../Pages/Inventory';
+import Volunteers from '../Pages/Volunteers';
 
 const SwitchRoutes = ({ match }) => {
     if(match && match.params && match.params.dashboardPage) {
@@ -15,7 +22,27 @@ const SwitchRoutes = ({ match }) => {
             case 'team': {
                 return <Team />
             }
-
+            case 'clients': {
+                return <Clients />
+            }
+            case 'agencies': {
+                return <Agencies />
+            }
+            case 'agency-profile': {
+                return <AgencyProfile />
+            }
+            case 'employees': {
+                return <Employees />
+            }
+            case 'calendar':{
+                return <Calendar />
+            }
+            case 'inventory': {
+                return <Inventory />
+            }
+            case 'volunteers': {
+                return <Volunteers />
+            }
         }
     }
     return <NotFound404 />;
