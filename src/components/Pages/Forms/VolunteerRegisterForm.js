@@ -9,13 +9,16 @@ export const validate = (values) => {
     name: 'required',
     email: 'required|email',
     phoneNumber: 'required',
-    password: 'required|min:6'
+    password: 'required|min:6',
+    verifyPassword: 'same:password'
 
   }
 
   const errorMsg = {
+    "required.name": "Please enter a name",
     "required.email": "Please enter an email address",
     "email.email": "Please enter a valid email address",
+    "required.phoneNumber":"Please enter your phone number",
     "required.password": "Please enter a password for your account",
     "min.password": "Please enter a password with 6 or more characters",
   }

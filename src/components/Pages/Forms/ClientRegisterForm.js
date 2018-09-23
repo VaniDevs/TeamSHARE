@@ -102,9 +102,9 @@ class ClientRegisterForm extends Component {
         <fieldset className="c-fieldset">
           <legend className="c-fieldset__legend">Baby Information</legend>
 
-          <Field component={renderField} name="clientBabyInfo.name" id="clientBabyName" type="text" label="Baby Name" />
+
           <Field component={renderField} name="clientBabyInfo.dateOfBirth" id="clientBabyDOB" type="date" label="Date Of Birth" />
-          <Field component={renderField} name="clientBabyInfo.gender" id="clientBabyGender" type="text" label="Baby Gender" />
+
 
         </fieldset>
 
