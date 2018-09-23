@@ -1,5 +1,4 @@
 .b-sidebar {
-
   &__logo {
     display: block;
     width: 70%;
@@ -12,7 +11,7 @@
 
   &__nav-list {
     padding-left: gutter();
-    font-weight: 700;
+    // font-weight: 700;
   }
 
   &__nav-link {
