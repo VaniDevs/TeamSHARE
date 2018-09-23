@@ -57,7 +57,7 @@ class VolunteerDashboard extends Component {
                     <div className="c-card">
                         <div className="c-card__body">
                             <h4>Appointments Calendar</h4>
-                            <div style={{ height: 400 }}>
+                            <div style={{ height: 600 }}>
                                 <BigCalendar
                                     localizer={localizer}
                                     events={events}
