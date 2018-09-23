@@ -29,10 +29,8 @@ export function createNewClient(data) {
         updates[`clients/${clientId}`] = data;
         updates[`agencyClients/${data.agencyId}/${clientId}`] = { 
             status: 'pending',
-            name: data.name, 
-            demographic: data.demographic, 
+            ...data,
             appointmentDate: data.potentialAppointmentDate, 
-            phone: data.phone,
             numItemsRequested: data.gearRequested.length
         }
         

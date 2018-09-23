@@ -12,10 +12,10 @@ export class GriddleLayout extends Component {
       <div>
         <div className={`sort-settings sort-cards clearfix`}>
           <div className="o-grid">
-            <div class="o-grid__cell o-grid__cell--width-50">
+            <div className="o-grid__cell o-grid__cell--width-50">
               <Filter />
             </div>
-            <div class="o-grid__cell o-grid__cell--width-10 o-grid__cell--offset-40">
+            <div className="o-grid__cell o-grid__cell--width-10 o-grid__cell--offset-40">
               <SettingsWrapper />
             </div>
           </div>

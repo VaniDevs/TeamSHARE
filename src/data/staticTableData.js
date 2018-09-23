@@ -84,112 +84,434 @@ export const agencies = [
 export const clients = [{
         "id": 1,    
         "name": "Madelena Lomasney",
-        "demographic": "Under 19",
+        "demographic": {
+            0: {
+                label: "Under 19",
+                value: "under19"
+            }
+        },
         "agency": "Schulist, Bahringer and Cormier",
         "numItemsRequested": 1,
         "status": "pending",
-        "mobile": "444-667-7374",
-        "appointmentDate:": "2018-05-13",
-        "lastVisited": "2018-01-22"
+        "phone": "444-667-7374",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-05-13",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-01-22",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 2,
         "name": "Marlin Bazley",
         "demographic": "Other",
+        "demographic": {
+            0: {
+                label: "other",
+                value: "Other"
+            }
+        },
         "agency": "Herman and Sons",
         "numItemsRequested": 2,
         "status": "pending",
-        "mobile": "527-233-9192",
-        "appointmentDate:": "2017-10-03",
-        "lastVisited": "2018-01-16"
+        "phone": "527-233-9192",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2017-10-03",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-01-16",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 3,
         "name": "Hattie Dan",
-        "demographic": "Unemployed",
+        "demographic": {
+            0: {
+                label: "Unemployed",
+                value: "unemployed"
+            }
+        },
         "agency": "Larson, Dicki and Kunze",
         "numItemsRequested": 3,
         "status": "approved",
-        "mobile": "691-103-5708",
-        "appointmentDate:": "2017-12-30",
-        "lastVisited": "2018-06-12"
+        "phone": "691-103-5708",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2017-12-30",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-06-12",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 4,
         "name": "Janine Quested",
-        "demographic": "Homeless",
+        "demographic": {
+            0: {
+                label: "Homeless",
+                value: "homeless"
+            }
+        },
         "agency": "Klocko, Bechtelar and Lakin",
         "numItemsRequested": 4,
         "status": "approved",
-        "mobile": "380-507-5129",
-        "appointmentDate:": "2018-04-21",
-        "lastVisited": "2018-01-29"
+        "phone": "380-507-5129",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-04-21",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-01-29",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 5,
         "name": "Luce Drayton",
-        "demographic": "Unemployed",
+        "demographic": {
+            0: {
+                label: "Unemployed",
+                value: "unemployed"
+            }
+        },
         "agency": "Deckow LLC",
         "numItemsRequested": 5,
         "status": "pending",
-        "mobile": "583-663-4800",
-        "appointmentDate:": "2018-06-12",
-        "lastVisited": "2018-02-24"
+        "phone": "583-663-4800",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-06-12",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-02-24",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 6,
         "name": "Malorie Riggulsford",
-        "demographic": "Child with Special needs",
+        "demographic": {
+            0: {
+                label: "Child with Special needs",
+                value: "Child with Special needs"
+            }
+        },
         "agency": "Shields-Macejkovic",
         "numItemsRequested": 6,
         "status": "pending",
-        "mobile": "750-359-4788",
-        "appointmentDate:": "2018-07-25",
-        "lastVisited": "2018-01-05"
+        "phone": "750-359-4788",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-07-25",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-01-05",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 7,
         "name": "Pietrek Glasspool",
-        "demographic": "Child with Special Needs",
+        "demographic": {
+            0: {
+                label: "Child with Special needs",
+                value: "Child with Special needs"
+            }
+        },
         "agency": "Gulgowski, Kuvalis and Gleichner",
         "numItemsRequested": 7,
         "status": "approved",
-        "mobile": "430-285-1421",
-        "appointmentDate:": "2018-06-25",
-        "lastVisited": "2017-11-26"
+        "phone": "430-285-1421",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-06-25",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2017-11-26",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 1,
         "name": "Livia Bredee",
-        "demographic": "Homeless",
+        "demographic": "",
+        "demographic": {
+            0: {
+                label: "Homeless",
+                value: "Homeless"
+            }
+        },
         "agency": "Morar-Leuschke",
         "numItemsRequested": 8,
         "status": "pending",
-        "mobile": "204-162-9956",
-        "appointmentDate:": "2018-07-10",
-        "lastVisited": "2018-04-23"
+        "phone": "204-162-9956",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-07-10",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-04-23",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 8,
         "name": "Harp Sparway",
-        "demographic": "Newcomer to Canada",
+        "demographic": {
+            0: {
+                label: "Newcomer to Canada",
+                value: "Newcomer to Canada"
+            }
+        },
         "agency": "Sawayn-O'Conner",
         "numItemsRequested": 9,
         "status": "pending",
-        "mobile": "519-592-8189",
-        "appointmentDate:": "2017-11-15",
-        "lastVisited": "2018-09-20"
+        "phone": "519-592-8189",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2017-11-15",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-09-20",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     },
     {
         "id": 9,
         "name": "Helyn Watsham",
-        "demographic": "Homeless",
+        "demographic": {
+            0: {
+                label: "Homeless",
+                value: "Homeless"
+            }
+        },
         "agency": "Balistreri-VonRueden",
         "numItemsRequested": 10,
         "status": "approved",
-        "mobile": "182-505-2361",
-        "appointmentDate:": "2018-07-02",
-        "lastVisited": "2018-01-18"
+        "phone": "182-505-2361",
+        "email": "testclient@test.com",
+        "dob": "1992-04-03",
+        "gender": "F",
+        "nationality": "Canadian",
+        "potentialAppointmentDate:": "2018-07-02",
+        "potentialAppointmentTimeDate": "11:00",
+        "gearRequested": {
+            0: {
+                label: "Crib",
+                value: "crib"
+            },
+            1: {
+                label: "Bassinet",
+                value: "bassinet",
+            },
+            2: {
+                label: "Single Stroller",
+                value: "singleStroller"
+            }
+        },
+        "lastVisited": "2018-01-18",
+        "clientAddress": {
+            "city": "Vancouver",
+            "country": "Canada",
+            "prov": "BC",
+            "street": "Burrard",
+            "suite": "955"
+        },
+        "clientBabyDOB": "2018-09-12"
     }
 ]
 
@@ -371,3 +693,169 @@ export const employees = [{
     "phone": "492-905-2023",
     "status": "active"
 }]
+
+
+export const inventoryByKeys = {
+    "crib": {
+        label: "Crib",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "bassinet": {
+        label: "Bassinet",
+        available: 6,
+        pending: 3,
+        reserved: 10
+    },
+    "pickNPlay": {
+        label: "Pack n Play",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "singleStroller": {
+        label: "Single Stroller",
+        available: 0,
+        pending: 3,
+        reserved: 10
+    },
+    "doubleStroller": {
+        label: "Double Stroller",
+        available: 0,
+        pending: 3,
+        reserved: 10
+    },
+    "frontCarrier": {
+        label: "Front Carrier",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "bouncyChair": {
+        label: "Bouncy Chair",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "swing": {
+        label: "Swing",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "exersaucer": {
+        label: "Exersaucer",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "jollyJumper": {
+        label: "Jolly Jumper",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "bumbo": {
+        label: "Bumbo",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "highChair": {
+        label: "High Chair",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "bathtub": {
+        label: "Bathtub",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "diapers": {
+        label: "Diapers",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "diaperBag": {
+        label: "Diaper Bag",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "blankets": {
+        label: "Blankets",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "cribBedding": {
+        label: "Crib Bedding",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "sleepsacks": {
+        label: "Sleepsacks",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "clothing": {
+        label: "Clothing",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "toysBooks": {
+        label: "Toys/Books",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "nursingPillow": {
+        label: "Nursing Pillow",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "safetyGate": {
+        label: "Safety Gate",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "bottles": {
+        label: "Bottles",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "feedingAccessories": {
+        label: "Feeding Accessories",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "monitor": {
+        label: "Monitor",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "safetyGear": {
+        label: "Safety Gear",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+    "breastPump": {
+        label: "Breast Pump",
+        available: 2,
+        pending: 3,
+        reserved: 10
+    },
+}

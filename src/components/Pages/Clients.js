@@ -11,16 +11,19 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { convertObjectOfObjectsToArrayOfObjects} from '../../utils/helper';
+import ClientModal from './Clients/ClientModal';
 class Clients extends Component {
     constructor(props){
       super(props)
     
       this.state = {
-          pageSize: 10
+          pageSize: 10,
+          isClientModalOpen: false,
+          clientRowData: null
       }
 
-      this._handlePageSizeChange = this._handlePageSizeChange.bind(this)
-    
+      this._handlePageSizeChange = this._handlePageSizeChange.bind(this);
+      this._openClientModal = this._openClientModal.bind(this);
     }
 
     componentDidMount() {
@@ -39,9 +42,21 @@ class Clients extends Component {
     _handlePageSizeChange(size) {
         this.setState({ pageSize: size })
     }
+
+    _openClientModal(rowData) {
+        console.log('open client modal')
+        this.setState({ isClientModalOpen: true, clientRowData: rowData })
+    }
     
 
     render() {
+        const EnhanceWithRowData = connect((state, props) => ({
+            rowData: plugins.LocalPlugin.selectors.rowDataSelector(state, props)
+          }));
+        const viewBtn = EnhanceWithRowData(props => {
+            return <button type="button" className="c-button" onClick={() => { return this._openClientModal(props.rowData) }}>View</button>
+        });
+
         let data = clients,
             type = this.props.userInfo && this.props.userInfo.type ? this.props.userInfo.type : null;
 
@@ -51,6 +66,15 @@ class Clients extends Component {
                 data = [...clients, ...addDataFromDb];
                 console.log('daa', data);
             }
+
+            const demographicComponent = EnhanceWithRowData(props => {
+                let { rowData } = props;
+                let demographic = rowData && rowData.demographic ? rowData.demographic : null;
+                return <span>{demographic && Object.keys(demographic) && Object.keys(demographic).map((item, index) => (
+                    <p key={index}>{demographic[item].label}</p>
+                ))}</span>
+              })
+          
         return (
             <div className="b-page">
                 <h1>Clients</h1>
@@ -80,7 +104,12 @@ class Clients extends Component {
                     components={{ Filter, Layout: GriddleLayout }}
                     styleConfig={{
                         classNames: {
-                            Table: "griddle-table b0 table table-striped table-hover dataTable  ",
+                            Table: "griddle-table c-table c-table--striped",
+                            TableHeading: 'griddle-table-heading c-table__head',
+                            TableHeadingCell: 'griddle-table-heading-cell c-table__cell',
+                            TableBody: 'griddle-table-body c-table__body',
+                            Row: 'griddle-row c-table__row  c-table__row--clickable',
+                            Cell: 'griddle-cell c-table__cell',
                             PageDropdown: 'griddle-page-select form-control',
                             NextButton: "griddle-next-button btn",
                             Pagination: "griddle-pagination pull-right",
@@ -91,16 +120,23 @@ class Clients extends Component {
                     <RowDefinition>
                         {/* <ColumnDefinition id="id" metadata={true} /> */}
                         <ColumnDefinition id="name" title="Name" />
-                        <ColumnDefinition id="demographic" title="Demographic" />
+                        <ColumnDefinition id="demographic" title="Demographic" customComponent={demographicComponent} />
                         <ColumnDefinition id="agency" title="agency" />
                         <ColumnDefinition id="status" title="status" />
                         <ColumnDefinition id="numItemsRequested" title="# Items Requested" />
-                        <ColumnDefinition id="appointmentDate" title="Appointment Date" />
+                        {/* <ColumnDefinition id="appointmentDate" title="Appointment Date" /> */}
                         <ColumnDefinition id="lastVisited" title="Last Visited" />
+                        <ColumnDefinition id="view" title="View" customComponent={viewBtn} />
 
                         {/* <ColumnDefinition id="address" title="Address" /> */}
                     </RowDefinition>
                 </Griddle>
+
+                <ClientModal 
+                    isOpen={this.state.isClientModalOpen}
+                    closeModal={() => {this.setState({ isClientModalOpen: false })}}
+                    rowData={this.state.clientRowData}
+                />
             </div>
         )
     }
