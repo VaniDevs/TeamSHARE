@@ -109,9 +109,6 @@ class VolunteerDashboard extends Component {
                     </div>
                 </div>
                 </div>
-
-                
-                <p>Some kind of Bar Chart of Personal Chart?</p>
         </div>
         )
     }

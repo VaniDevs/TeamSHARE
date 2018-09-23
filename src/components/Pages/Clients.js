@@ -79,10 +79,10 @@ class Clients extends Component {
                   let {rowData} = props;
                   let status = rowData && rowData.status ? rowData.status : null;
                   return status === 'pending'?
-                  <div style={{padding: 0, margin: 0}} role="alert" class="c-alert c-alert--warning">Pending</div>
+                  <div style={{padding: 0, margin: 0}} role="alert" className="c-alert c-alert--warning">Pending</div>
                   :
                   status === 'approved' ?
-                  <div style={{padding: 0, margin: 0}} role="alert" class="c-alert c-alert--success">Approved</div>
+                  <div style={{padding: 0, margin: 0}} role="alert" className="c-alert c-alert--success">Approved</div>
                   : null
               })
           

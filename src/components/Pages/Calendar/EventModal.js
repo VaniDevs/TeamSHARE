@@ -14,7 +14,7 @@ const customStyles = {
 
 
 export default (props) => {
-  let { isOpen, closeModal } = props;
+  let { isOpen, closeModal, rowData } = props;
 
   return (
     <Modal isOpen={isOpen}
@@ -33,7 +33,7 @@ export default (props) => {
         </header>
 
         <div className="c-card__body o-panel">
-          This is the modal body
+          {JSON.stringify(rowData)}
         </div>
 
         <footer className="c-card__footer">

@@ -60,7 +60,7 @@ class Employees extends Component {
                     }}
                 >
                     <RowDefinition>
-                        <ColumnDefinition id="id" metadata={true} />
+                        {/* <ColumnDefinition id="id" metadata={true} /> */}
                         <ColumnDefinition id="name" title="Name" />
                         <ColumnDefinition id="phone" title="Phone" />
                     </RowDefinition>

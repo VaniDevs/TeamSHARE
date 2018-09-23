@@ -15,7 +15,8 @@ class Calendar extends Component {
     super(props)
 
     this.state = {
-      isEventModalOpen: false
+      isEventModalOpen: false,
+      eventData: null
     }
 
     this._closeModal = this._closeModal.bind(this)
@@ -26,6 +27,7 @@ class Calendar extends Component {
     console.log(slotinfo)
     this.setState({
       isEventModalOpen: true,
+      eventData: slotinfo
       // dayDetails: slotinfo
     })
   }
@@ -52,7 +54,11 @@ class Calendar extends Component {
           </div>
         </div>
 
-        <EventModal isOpen={this.state.isEventModalOpen} closeModal={this._closeModal} />
+        <EventModal 
+          isOpen={this.state.isEventModalOpen} 
+          closeModal={this._closeModal} 
+          rowData={this.state.eventData}
+         />
       </React.Fragment>
     )
   }
