@@ -21,8 +21,14 @@ class Header extends Component {
         return (
             <div className="l-header-container">
                 <header>
-                    {!sidebarDocked && <button type="button" onClick={openSidebar}>Open Sidebar</button>}
-                    <button onClick={this._logoutUser} type="button">Logout</button>
+                    <div class="o-grid o-grid--demo">
+                        <div class="o-grid__cell o-grid__cell--width-40">
+                            {!sidebarDocked && <button type="button" onClick={openSidebar}>Open Sidebar</button>}
+                        </div>
+                        <div class="o-grid__cell o-grid__cell--width-20 o-grid__cell--offset-40" style={{ textAlign: 'right' }}>
+                            <button onClick={this._logoutUser} type="button">Logout</button>
+                        </div>
+                    </div>
                 </header>
             </div>
         )
@@ -30,7 +36,7 @@ class Header extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ 
+    return bindActionCreators({
         logoutUser
     }, dispatch);
 }

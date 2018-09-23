@@ -1,11 +1,18 @@
+body {
+  background-color: #f5f6fa;
+  // background-color: $brand-lightgray;
+}
+
 .l-container {
   @include container();  
   overflow: auto !important;
 
   .l-sidebar-container {    
-    @include span(6 first);          
+    @include span(5 first);          
     padding: gutter()/2 span(1)/3;
-    background-color: $brand-lightgray;
+    background-color: $brand-white;
+    box-shadow: none !important;
+    // background-color: $brand-lightgray;
   }  
 
   /* Responsive Layout */
