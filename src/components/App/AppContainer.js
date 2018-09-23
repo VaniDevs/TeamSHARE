@@ -3,11 +3,15 @@ import Header from '../Base/Header';
 import SidebarContent from '../Base/SidebarContent';
 import Footer from '../Base/Footer';
 import AppRoutes from '../Routes/AppRoutes';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import Sidebar from "react-sidebar";
 
 // media query global variable
 const mql = window.matchMedia(`(min-width: 768px)`);
+
+
 
 class AppContainer extends Component {
     constructor(props) {
@@ -38,8 +42,9 @@ class AppContainer extends Component {
     }
 
     render() {
-        let { match } = this.props;
-        const sidebar = <SidebarContent match={this.props.match} closeSidebar={() => this._onSetSidebarOpen(false)} />
+        let { match, userInfo } = this.props;
+        let type = userInfo && userInfo.type ? userInfo.type : null;
+        const sidebar = <SidebarContent match={this.props.match} type={type} closeSidebar={() => this._onSetSidebarOpen(false)} />
 
         return (
              <Sidebar
@@ -63,8 +68,6 @@ class AppContainer extends Component {
     }
 }
 
-export default AppContainer;
-
 {/* <div>
     <Header></Header>
     <Sidebar match={match} />
@@ -72,3 +75,18 @@ export default AppContainer;
     <Footer></Footer>
 </div> */}
 
+
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ 
+
+    }, dispatch);
+}
+
+function mapStateToProps(state) {
+    return { 
+        userInfo: state.userInfo
+    };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
