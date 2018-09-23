@@ -45,7 +45,7 @@ class LoginForm extends Component {
 
         <p>Forgot Password?</p>
         <span class="c-input-group">
-          <button type="button" class="c-button">Submit</button>
+          <button type="submit" className="c-button">Submit</button>
         </span>
 
       </form>
