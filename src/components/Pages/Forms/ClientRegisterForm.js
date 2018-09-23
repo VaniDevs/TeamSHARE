@@ -9,9 +9,29 @@ export const validate = (values) => {
     name: 'required',
     email: 'required|email',
     phone: 'required',
-    dateOfBirth:'date',
+    dateOfBirth:'required',
+    gender: 'required',
+    nationality: 'required',
+    demographic: 'required',
+    familyAnnualIncome: 'required',
+    clientAddress: {
+  suite: 'required',
+    },
+
+    'clientAddress.street': 'required',
+    'clientAddress.city': 'required',
+    'clientAddress.prov': 'required',
+    'clientAddress.country': 'required',
+   'clientAddress.postalCode': 'required',
+   'clientBabyInfo.name': 'required',
+   'clientBabyInfo.dateOfBirth': 'required',
+   'clientBabyInfo.gender': 'required',
     password: 'required|min:6',
-    verifyPassword: 'same:password'
+    verifyPassword: 'same:password',
+    gearRequested: 'required',
+    potentialAppointmentDate: 'required',
+    potentialAppointmentTimeDate: 'required'
+
 
   }
 
