@@ -20,7 +20,9 @@ section {
   }
 }
 
-a {
+.b-header__link, a {
+  border: none;
+  background: none;
   text-decoration: none;
   transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
   color: darken($brand-blue, 38%);
@@ -29,4 +31,9 @@ a {
   &:focus {
     opacity: 0.8;
   }
+}
+
+.b-header__link {
+  margin-top: gutter();
+  padding: gutter();
 }

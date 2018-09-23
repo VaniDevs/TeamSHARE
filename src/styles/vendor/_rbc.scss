@@ -22,3 +22,8 @@
 .c-table__cell {
   align-items: center;
 }
+
+.c-badge {
+  padding: gutter() !important;
+  font-size: 0.9em;
+}
