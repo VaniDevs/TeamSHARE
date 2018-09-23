@@ -1,13 +1,46 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const SidebarContent = ({ match }) => 
-        (
-            <ul>
-                <li><Link to={`${match.url}/team`}>Team</Link></li>
-                <li><Link to={`${match.url}/new-client`}>Agency</Link></li>
-            </ul>
-        )
+import { 
+    agencyEmpSidebar,
+    volunteerSidebar
+} from '../../data/sidebarLinks';
+
+const SidebarHelper = (match, type) => {
+    if(type) {
+        let sidebarContent = null;
+        switch(type) {
+            case 'agencyEmp': {
+                sidebarContent = agencyEmpSidebar;
+                break;
+            }
+            case 'BGRVolunteer': {
+                sidebarContent = volunteerSidebar;
+                break;
+            }
+            default: 
+                return null;
+        }
+
+        if(sidebarContent) {
+            console.log('side', sidebarContent)
+            return (<ul>
+                        { 
+                            Object.keys(sidebarContent).map((item, index) => (
+                                <li key={`sidebar-${index}`}>
+                                    <Link to={item && item !== '/dashboard' ? `${match.url}${item}` : ''}>{sidebarContent[item]}</Link>
+                                </li>
+                            ))
+                        }
+                    </ul>)
+        }
+    }
+    return null;
+}
+
+const SidebarContent = ({ match, type }) => {
+    return SidebarHelper(match, type);
+}
 
 
 export default SidebarContent;
