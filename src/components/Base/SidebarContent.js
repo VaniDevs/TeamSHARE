@@ -23,7 +23,6 @@ const SidebarHelper = (match, type) => {
         }
 
         if(sidebarContent) {
-            console.log('side', sidebarContent)
             return (<ul>
                         { 
                             Object.keys(sidebarContent).map((item, index) => (

@@ -9,6 +9,9 @@ import Clients from '../Pages/Clients';
 import Agencies from '../Pages/Agencies';
 import AgencyProfile from '../Pages/AgencyProfile';
 import Employees from '../Pages/Employees';
+import Calendar from '../Pages/Calendar';
+import Inventory from '../Pages/Inventory';
+import Volunteers from '../Pages/Volunteers';
 
 const SwitchRoutes = ({ match }) => {
     if(match && match.params && match.params.dashboardPage) {
@@ -30,6 +33,15 @@ const SwitchRoutes = ({ match }) => {
             }
             case 'employees': {
                 return <Employees />
+            }
+            case 'calendar':{
+                return <Calendar />
+            }
+            case 'inventory': {
+                return <Inventory />
+            }
+            case 'volunteers': {
+                return <Volunteers />
             }
         }
     }
