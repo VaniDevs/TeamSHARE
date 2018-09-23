@@ -47,7 +47,7 @@ class VolunteerRegisterForm extends Component {
 
           <Field component={renderField} name="name" id="name" type="name" label="Name" />
             <Field component={renderField} name="email" id="name" type="email" label="Email" />
-            <Field component={renderField} name="phoneNumber" id="phoneNumber" type="tel" label="Phonenumber" />
+            <Field component={renderField} name="phoneNumber" id="phoneNumber" type="tel" label="Phone number" />
             <Field component={renderField} name="password" id="password" type="password" label="Password" />
             <Field component={renderField} name="verifyPassword" id="passWord" type="password" label="Verify Password" />
 
