@@ -14,8 +14,6 @@ class VolunteerDashboard extends Component {
         return (
         <div className="b-page">
           <h1 className="b-page__header">Overview</h1>
-
-            
                 <div className="o-grid o-grid--demo">
                 <div className="o-grid__cell">
                     <div className="o-grid-text">
