@@ -16,11 +16,11 @@ class VolunteerDashboard extends Component {
           <h1 className="b-page__header">Overview</h1>
 
             
-                <div class="o-grid o-grid--demo">
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                        <div class="c-card">
-                            <div class="c-card__body">
+                <div className="o-grid o-grid--demo">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>
                                 <CountUp 
                                     start={0}
@@ -32,10 +32,10 @@ class VolunteerDashboard extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                    <div class="c-card">
-                        <div class="c-card__body">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                    <div className="c-card">
+                        <div className="c-card__body">
                             <h4>
                                 <CountUp 
                                     start={0}
@@ -47,10 +47,10 @@ class VolunteerDashboard extends Component {
                      
                     </div>
                 </div>
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                    <div class="c-card">
-                        <div class="c-card__body">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                    <div className="c-card">
+                        <div className="c-card__body">
                             <h4>
                                 <CountUp 
                                     start={0}
@@ -65,11 +65,11 @@ class VolunteerDashboard extends Component {
                 </div>
 
 
-                <div class="o-grid o-grid--demo">
-                    <div class="o-grid__cell">
-                        <div class="o-grid-text">
-                        <div class="c-card">
-                            <div class="c-card__body">
+                <div className="o-grid o-grid--demo">
+                    <div className="o-grid__cell">
+                        <div className="o-grid-text">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>Appointments Calendar</h4>
                                     <div style={{ height: 400 }}>
                                         <BigCalendar
@@ -84,26 +84,26 @@ class VolunteerDashboard extends Component {
                     </div>
                 </div>
 
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                    <div class="c-card">
-                    <div role="separator" class="c-card__item c-card__item--divider">Inventory Stock</div>
-                        <div class="c-card__item  ">
-                            <p class="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
-                            <p class="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                    <div className="c-card">
+                    <div role="separator" className="c-card__item c-card__item--divider">Inventory Stock</div>
+                        <div className="c-card__item  ">
+                            <p className="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
+                            <p className="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
                         </div>
                     </div>
-                    <div class="c-card">
-                    <div role="separator" class="c-card__item c-card__item--divider">Volunteer Updates</div>
-                        <div class="c-card__item  ">
+                    <div className="c-card">
+                    <div role="separator" className="c-card__item c-card__item--divider">Volunteer Updates</div>
+                        <div className="c-card__item  ">
                             <p>As per new government rules, it's mandatory to do ...</p>
                         </div>
                     </div>
                     </div>
 
-                    <div class="c-card">
-                        <div role="separator" class="c-card__item c-card__item--divider">Keep up the good work</div>
-                        <div class="c-card__item">
+                    <div className="c-card">
+                        <div role="separator" className="c-card__item c-card__item--divider">Keep up the good work</div>
+                        <div className="c-card__item">
                             <Graph />
                         </div>
                     </div>

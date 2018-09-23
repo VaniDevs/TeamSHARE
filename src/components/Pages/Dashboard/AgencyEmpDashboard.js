@@ -14,21 +14,21 @@ class AgencyEmpDashboard extends Component {
             <div className="b-page">
                 <h1 className="b-page__header">Social Worker Overview</h1>
 
-                <div class="o-grid o-grid--demo">
+                <div className="o-grid o-grid--demo">
   
 
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                        <div class="c-card">
-                            <div class="c-card__body">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>Add New Client</h4>
                             </div>
                         </div>
-                    <div class="o-grid o-grid--demo">
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                        <div class="c-card">
-                            <div class="c-card__body">
+                    <div className="o-grid o-grid--demo">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>
                                 <CountUp 
                                     start={0}
@@ -40,10 +40,10 @@ class AgencyEmpDashboard extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                    <div class="c-card">
-                        <div class="c-card__body">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                    <div className="c-card">
+                        <div className="c-card__body">
                             <h4>
                                 <CountUp 
                                     start={0}
@@ -55,10 +55,10 @@ class AgencyEmpDashboard extends Component {
                      
                     </div>
                 </div>
-                <div class="o-grid__cell">
-                    <div class="o-grid-text">
-                    <div class="c-card">
-                        <div class="c-card__body">
+                <div className="o-grid__cell">
+                    <div className="o-grid-text">
+                    <div className="c-card">
+                        <div className="c-card__body">
                             <h4>
                                 <CountUp 
                                     start={0}
@@ -73,18 +73,18 @@ class AgencyEmpDashboard extends Component {
                             </div>
                         </div>
 
-                        <div class="c-card">
-                            <div class="c-card__body">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>Share the Stats</h4>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                    <div class="o-grid__cell">
-                        <div class="o-grid-text">
-                        <div class="c-card">
-                            <div class="c-card__body">
+                    <div className="o-grid__cell">
+                        <div className="o-grid-text">
+                        <div className="c-card">
+                            <div className="c-card__body">
                                 <h4>Appointments Calendar</h4>
                                     <div style={{ height: 400 }}>
                                         <BigCalendar
@@ -99,16 +99,6 @@ class AgencyEmpDashboard extends Component {
                     </div>
                 </div>
 
-                </div>
-
-
-                <div className="c-card">
-                    <div className="c-card__body">
-                        <p>Calendar</p>
-                        <p>Include Stats for Number of Clients</p>
-                        <p>A big button to add a new client</p>
-                        <p>Spread the Word. Tweet / Blah / Social</p>
-                    </div>
                 </div>
 
             </div>

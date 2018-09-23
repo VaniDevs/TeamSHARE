@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { renderField, renderSelect } from '../../../utils/renderForms';
 
+import { normalizePhone } from '../../../utils/helper';
+
 import Validator from 'validatorjs';
 
 export const validate = (values) => {
@@ -69,6 +71,35 @@ class ClientRegisterForm extends Component {
         { label: 'Child with Special Needs', value: 'special' },
         { label: 'Homeless', value: 'homeless' },
         { label: 'Other', value: 'other' },
+      ],
+      gearRequested = [
+        { label: "Crib", value: "crib" },
+        { label: "Bassinet", value: "bassinet" },
+        { label: "Pack 'n Play", value: "pickNPlay" },
+        { label: "Single Stroller", value: "singleStroller" },
+        { label: "Double Stroller", value: "doubleStroller" },
+        { label: "Front Carrier", value: "frontCarrier" },
+        { label: "Bouncy Chair", value: "bouncyChair" },
+        { label: "Swing", value: "swing" },
+        { label: "Exersaucer", value: "exersaucer" },
+        { label: "Jolly Jumper", value: "jollyJumper" },
+        { label: "Bumbo", value: "bumbo" },
+        { label: "High Chair", value: "highChair" },
+        { label: "Bathtub", value: "bathtub" },
+        { label: "Diapers", value: "diapers" },
+        { label: "Diaper Bag", value: "diaperBag" },
+        { label: "Blankets", value: "blankets" },
+        { label: "Crib Bedding", value: "cribBedding" },
+        { label: "Sleepsacks", value: "sleepsacks" },
+        { label: "Clothing", value: "clothing" },
+        { label: "Toys/Books", value: "toysBooks" },
+        { label: "Nursing Pillow", value: "nursingPillow" },
+        { label: "Safety Gate", value: "safetyGate" },
+        { label: "Bottles", value: "bottles" },
+        { label: "Feeding Accessories", value: "feedingAccessories" },
+        { label: "Monitor", value: "monitor" },
+        { label: "Safety Gear", value: "safetyGear" },
+        { label: "Breast Pump", value: "breastPump" },
       ];
 
     return (
@@ -77,11 +108,11 @@ class ClientRegisterForm extends Component {
 
         <Field component={renderField} name="email" id="email" type="text" label="Email" />
 
-        <Field component={renderField} name="phone" id="phone" type="tel" label="Phone" />
+        <Field component={renderField} name="phone" id="phone" type="tel" label="Phone" normalize={normalizePhone} />
         
-        <Field component={renderField} name="dateOfBirth" id="dateOfBirth" type="date" label="Date of Birth" />
+        <Field component={renderField} name="dob" id="dob" type="date" label="Date of Birth" />
 
-        <Field component={renderField} name="gender" id="gender" type="text" label="Gender" />
+        <Field component={renderSelect} multi={false} name="gender" id="gender" options={[{ label: 'Male', value: 'M'}, {label: 'Female',  value: 'F'}]} label="Gender" cssMainClassName="" />
 
         <Field component={renderField} name="nationality" id="nationality" type="text" label="Nationality" />
 
@@ -103,12 +134,12 @@ class ClientRegisterForm extends Component {
           <legend className="c-fieldset__legend">Baby Information</legend>
 
 
-          <Field component={renderField} name="clientBabyInfo.dateOfBirth" id="clientBabyDOB" type="date" label="Date Of Birth" />
+          <Field component={renderField} name="clientBabyDOB" id="clientBabyDOB" type="date" label="Date Of Birth" />
 
 
         </fieldset>
 
-        <Field component={renderField} name="gearRequested" id="gearrequest" type="text" label="Gear Requested" />
+        <Field component={renderSelect} multi={true} name="gearRequested" id="gearRequested" type="text" label="Gear Requested" options={gearRequested} cssMainClassName="" />
 
         <fieldset className="c-fieldset">
           <legend className="c-fieldset__legend">Appointment Information</legend>

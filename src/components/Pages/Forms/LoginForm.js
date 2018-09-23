@@ -44,7 +44,7 @@ class LoginForm extends Component {
         <Field component={renderField} name="password" id="password" type="password" label="Password" />
 
         <p>Forgot Password?</p>
-        <span class="c-input-group">
+        <span className="c-input-group">
           <button type="submit" className="c-button">Submit</button>
         </span>
 

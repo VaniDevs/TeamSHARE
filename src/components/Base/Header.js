@@ -21,11 +21,11 @@ class Header extends Component {
         return (
             <div className="l-header-container">
                 <header>
-                    <div class="o-grid o-grid--demo">
-                        <div class="o-grid__cell o-grid__cell--width-40">
+                    <div className="o-grid o-grid--demo">
+                        <div className="o-grid__cell o-grid__cell--width-40">
                             {!sidebarDocked && <button type="button" onClick={openSidebar}>Open Sidebar</button>}
                         </div>
-                        <div class="o-grid__cell o-grid__cell--width-20 o-grid__cell--offset-40" style={{ textAlign: 'right' }}>
+                        <div className="o-grid__cell o-grid__cell--width-20 o-grid__cell--offset-40" style={{ textAlign: 'right' }}>
                             <button onClick={this._logoutUser} type="button">Logout</button>
                         </div>
                     </div>
