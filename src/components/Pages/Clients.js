@@ -4,7 +4,7 @@ import { Filter, GriddleLayout, PageSizeDropDownPlugin } from '../../utils/gridd
 import { Link } from 'react-router-dom';
 import { clients } from "../../data/staticTableData";
 
-import { fetchAgencyClients } from '../../actions/agencyActions';
+import { fetchAgencyClients, fetchAllClients } from '../../actions/agencyActions';
 import { fetchUser, fetchUserInfo } from '../../actions/authActions';
 
 import { connect } from 'react-redux';
@@ -32,7 +32,12 @@ class Clients extends Component {
             return this.props.fetchUserInfo(ret.payload.uid).then(infoRet => {
                 let agencyId = infoRet && infoRet.payload && infoRet.payload.agencyId ? infoRet.payload.agencyId : null;
                 console.log('info', infoRet)
-                return this.props.fetchAgencyClients({ agencyId })
+                if(agencyId) {
+                    return this.props.fetchAgencyClients({ agencyId })
+                }
+                else {
+                    return this.props.fetchAllClients()
+                }
             })
             }
             return null;
@@ -132,7 +137,10 @@ class Clients extends Component {
                         {/* <ColumnDefinition id="id" metadata={true} /> */}
                         <ColumnDefinition id="name" title="Name" />
                         <ColumnDefinition id="demographic" title="Demographic" customComponent={demographicComponent} />
-                        <ColumnDefinition id="agency" title="agency" />
+                        {
+                            type === 'BGRVolunteer' &&
+                            <ColumnDefinition id="agency" title="agency" />
+                        }
                         <ColumnDefinition id="status" title="status" customComponent={statusComponent}/>
                         <ColumnDefinition id="numItemsRequested" title="# Items Requested" />
                         {/* <ColumnDefinition id="appointmentDate" title="Appointment Date" /> */}
@@ -158,7 +166,8 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators({ 
         fetchUser,
         fetchUserInfo, 
-        fetchAgencyClients
+        fetchAgencyClients,
+        fetchAllClients
     }, dispatch);
 }
 

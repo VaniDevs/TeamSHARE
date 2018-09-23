@@ -1,6 +1,7 @@
 
 import {
-    FETCH_AGENCY_INFO
+    FETCH_AGENCY_INFO,
+    FETCH_ALL_CLIENTS
   } from '../actions/types';
 
 export function agencyReducer(state = null, action) {

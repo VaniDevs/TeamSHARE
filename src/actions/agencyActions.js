@@ -1,7 +1,8 @@
 import {
     FETCH_AGENCY_INFO,
     FETCH_AGENCY_CLIENTS,
-    CREATE_NEW_CLIENT
+    CREATE_NEW_CLIENT,
+    FETCH_ALL_CLIENTS
 } from './types';
 import { firebaseDb } from '../utils/firebase';
 
@@ -39,6 +40,14 @@ export function createNewClient(data) {
 
     return {
         type: CREATE_NEW_CLIENT,
+        payload: request
+    }
+}
+
+export function fetchAllClients(data) {
+    let request = firebaseDb.ref(`clients`).once('value').then(snapshot => snapshot.val());
+    return {
+        type: FETCH_ALL_CLIENTS,
         payload: request
     }
 }
