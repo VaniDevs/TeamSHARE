@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { withRouter } from 'react-router';
+
+import logo from "../../imgs/logo.png";
 class Login extends Component {
     constructor(props){
       super(props);
@@ -28,7 +30,17 @@ class Login extends Component {
     
     render() {
         return (
-            <LoginForm onSubmit={this._submitLogin} />
+            <main className="l-main-outside l-center-screen l-login-container">
+                <div className="b-login">
+                    <div className="b-login--left">
+                        <img src={logo} alt="BabyGoRound" />
+                        <h1>Login</h1>
+                        <LoginForm onSubmit={this._submitLogin} />
+                    </div>
+                    <div className="b-login--right">
+                    </div>
+                </div>
+            </main>
         )
     }
 }
