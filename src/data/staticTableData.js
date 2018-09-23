@@ -1,5 +1,3 @@
-export const employees =  [{ "id": 1, "first_name": "Lucy", "last_name": "Dunseath", "email": "ldunseath0@omniture.com", "gender": "Female", "ip_address": "199.136.121.251" }, { "id": 2, "first_name": "Doti", "last_name": "Flinn", "email": "dflinn1@earthlink.net", "gender": "Female", "ip_address": "51.167.31.231" }, { "id": 3, "first_name": "Peterus", "last_name": "Abrahamsson", "email": "pabrahamsson2@youtube.com", "gender": "Male", "ip_address": "126.23.48.160" }, { "id": 4, "first_name": "Inness", "last_name": "Broadey", "email": "ibroadey3@aol.com", "gender": "Male", "ip_address": "43.141.151.106" }, { "id": 5, "first_name": "Sher", "last_name": "Gillbanks", "email": "sgillbanks4@intel.com", "gender": "Female", "ip_address": "51.61.218.133" }, { "id": 6, "first_name": "Devin", "last_name": "Fudger", "email": "dfudger5@photobucket.com", "gender": "Male", "ip_address": "243.189.236.109" }, { "id": 7, "first_name": "Gabriela", "last_name": "Goodson", "email": "ggoodson6@psu.edu", "gender": "Female", "ip_address": "178.35.10.193" }, { "id": 8, "first_name": "Mirabel", "last_name": "Gammons", "email": "mgammons7@rambler.ru", "gender": "Female", "ip_address": "163.194.105.238" }, { "id": 9, "first_name": "Manda", "last_name": "Admans", "email": "madmans8@springer.com", "gender": "Female", "ip_address": "93.125.186.250" }, { "id": 10, "first_name": "Raviv", "last_name": "Brounfield", "email": "rbrounfield9@ft.com", "gender": "Male", "ip_address": "6.234.36.7" }];
-
 export const agencies = [
     {
         "id": 1,
@@ -194,3 +192,182 @@ export const clients = [{
         "lastVisited": "2018-01-18"
     }
 ]
+
+export const inventory = [{
+    "name": "Crib",
+    "available": 1,
+    "pending": 1,
+    "reserved": 1
+}, {
+    "name": "Bassinet",
+    "available": 2,
+    "pending": 2,
+    "reserved": 2
+}, {
+    "name": "Pack 'n play",
+    "available": 3,
+    "pending": 3,
+    "reserved": 3
+}, {
+    "name": "Single Stroller",
+    "available": 4,
+    "pending": 4,
+    "reserved": 4
+}, {
+    "name": "Double Stroller",
+    "available": 5,
+    "pending": 5,
+    "reserved": 5
+}, {
+    "name": "Front Carrier",
+    "available": 6,
+    "pending": 6,
+    "reserved": 6
+}, {
+    "name": "Bouncy Chair",
+    "available": 7,
+    "pending": 7,
+    "reserved": 7
+}, {
+    "name": "Swing",
+    "available": 8,
+    "pending": 8,
+    "reserved": 8
+}, {
+    "name": "Exersaucer",
+    "available": 9,
+    "pending": 9,
+    "reserved": 9
+}, {
+    "name": "Jolly Jumper",
+    "available": 10,
+    "pending": 10,
+    "reserved": 10
+}, {
+    "name": "Bumbo",
+    "available": 11,
+    "pending": 11,
+    "reserved": 11
+}, {
+    "name": "High Chair",
+    "available": 12,
+    "pending": 12,
+    "reserved": 12
+}, {
+    "name": "Bathtub",
+    "available": 13,
+    "pending": 13,
+    "reserved": 13
+}, {
+    "name": "Diapers",
+    "available": 14,
+    "pending": 14,
+    "reserved": 14
+}, {
+    "name": "Diaper Bag",
+    "available": 15,
+    "pending": 15,
+    "reserved": 15
+}, {
+    "name": "Blankets",
+    "available": 16,
+    "pending": 16,
+    "reserved": 16
+}, {
+    "name": "Crib Bedding",
+    "available": 17,
+    "pending": 17,
+    "reserved": 17
+}, {
+    "name": "Sleepsacks",
+    "available": 18,
+    "pending": 18,
+    "reserved": 18
+}, {
+    "name": "Clothing",
+    "available": 19,
+    "pending": 19,
+    "reserved": 19
+}, {
+    "name": "Toys/Books",
+    "available": 20,
+    "pending": 20,
+    "reserved": 20
+}, {
+    "name": "Nursing Pillow",
+    "available": 21,
+    "pending": 21,
+    "reserved": 21
+}, {
+    "name": "Safety Gate",
+    "available": 22,
+    "pending": 22,
+    "reserved": 22
+}, {
+    "name": "Bottles",
+    "available": 23,
+    "pending": 23,
+    "reserved": 23
+}, {
+    "name": "Feeding Accessories",
+    "available": 24,
+    "pending": 24,
+    "reserved": 24
+}, {
+    "name": "Monitor",
+    "available": 25,
+    "pending": 25,
+    "reserved": 25
+}, {
+    "name": "Safety Gear",
+    "available": 26,
+    "pending": 26,
+    "reserved": 26
+}, {
+    "name": "Breast Pump",
+    "available": 27,
+    "pending": 27,
+    "reserved": 27
+}]
+
+export const employees = [{
+    "name": "Colver Twelvetrees",
+    "phone": "501-345-5272",
+    "status": "active"
+}, {
+    "name": "Amble Feuell",
+    "phone": "337-915-5891",
+    "status": "active"
+}, {
+    "name": "Enoch Davenhill",
+    "phone": "682-420-8114",
+    "status": "active"
+}, {
+    "name": "Mamie Proske",
+    "phone": "986-308-7001",
+    "status": "active"
+}, {
+    "name": "Teddy Tichelaar",
+    "phone": "749-811-8220",
+    "status": "active"
+}, {
+    "name": "Augie Wittke",
+    "phone": "446-181-7046",
+    "status": "active"
+}, {
+    "name": "Gerianna Greenalf",
+    "phone": "177-677-7904",
+    "status": "active"
+}, {
+    "name": "Ange Conningham",
+    "phone": "122-354-4545",
+    "status": "active"
+}, {
+    "name": "Lionel Lethbury",
+    "phone": "151-296-8436",
+    "status": "active"
+}, {
+    "name": "Othella Selwin",
+    "phone": "492-905-2023",
+    "status": "active"
+}]

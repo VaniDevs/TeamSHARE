@@ -56,8 +56,8 @@ class Employees extends Component {
                 >
                     <RowDefinition>
                         <ColumnDefinition id="id" metadata={true} />
-                        <ColumnDefinition id="first_name" title="Name" />
-                        <ColumnDefinition id="email" title="Email" />
+                        <ColumnDefinition id="name" title="Name" />
+                        <ColumnDefinition id="phone" title="Phone" />
                     </RowDefinition>
                 </Griddle>
             </div>
