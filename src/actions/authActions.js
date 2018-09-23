@@ -35,8 +35,8 @@ export function fetchUser() {
 }
 
 
-export function logoutUser(user) {
-    const request = FireBaseTools.logoutUser(user);
+export function logoutUser() {
+    const request = FireBaseTools.logoutUser();
     return {
         type: LOGOUT_FIREBASE_USER,
         payload: request,

@@ -10,7 +10,7 @@ import { withRouter } from 'react-router'
 class Register extends Component {
     constructor(props){
       super(props)
-      this.registerAgency = this.registerAgency.bind(this);
+      this._submitForm = this._submitForm.bind(this);
     }
 
     _submitForm(values) {
@@ -25,9 +25,6 @@ class Register extends Component {
             }
         })
     }
-    _submitForm(values) {
-            console.log('values', values)
-        }
     render() {
         return (
         <AgencyRegisterForm onSubmit={this._submitForm} />

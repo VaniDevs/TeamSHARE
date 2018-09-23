@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
 import AppContainer from '../App/AppContainer';
 import Login from '../Pages/Login';
-import App from '../../App';
 
 /* Register Page  */
 import AgencyRegister from '../Pages/Register/AgencyRegister';
@@ -15,28 +14,28 @@ import NotFound404 from '../Pages/NotFound404';
 // import { fetchUser } from '../../actions/authActions';
 // import store from '../../store'
 
-// const Redirects = ({ component: Component, ...rest }) => (
-//     <Route
-//       {...rest}
-//       render={props =>
-//         false ? (
-//             <Redirect
-//                 to={{
-//                 pathname: "/login",
-//                 state: { from: props.location }
-//                 }}
-//             />
-//         ) : (
-//           <Redirect
-//             to={{
-//               pathname: "/dashboard",
-//               state: { from: props.location }
-//             }}
-//           />
-//         )
-//       }
-//     />
-// );
+const Redirects = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        false ? (
+            <Redirect
+                to={{
+                pathname: "/login",
+                state: { from: props.location }
+                }}
+            />
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/dashboard",
+              state: { from: props.location }
+            }}
+          />
+        )
+      }
+    />
+);
 
 // const PrivateRoute = ({ component: Component, ...rest }) => (
 //     <Route
@@ -69,7 +68,7 @@ import NotFound404 from '../Pages/NotFound404';
 
 const MainRoutes = () => (
     <Switch>
-        <Route exact path='/' component={App} />
+        <Route exact path='/' component={Redirects} />
         <Route path='/login' component={Login}/>
         <Route path='/register-agency' component={AgencyRegister}/>
         <Route path='/register-agency-emp' component={SocialWorkerRegister}/>
