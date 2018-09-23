@@ -7,8 +7,9 @@ import Validator from 'validatorjs';
 export const validate = (values) => {
   const rules = {
     name: 'required',
-    phone: 'required',
     email: 'required|email',
+    phone: 'required',
+    dateOfBirth:'date',
     password: 'required|min:6',
     verifyPassword: 'same:password'
 
@@ -96,7 +97,7 @@ class ClientRegisterForm extends Component {
           <Field component={renderField} name="potentialAppointmentTimeDate" id="potentialAppointmentTime" type="time" label="Potential Appointment Time" />
         </fieldset>
 
-        
+        <button type="submit">Register</button>
       </form>
     )
   }

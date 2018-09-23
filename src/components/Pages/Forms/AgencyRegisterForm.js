@@ -5,8 +5,9 @@ import { renderField } from '../../../utils/renderForms';
 import Validator from 'validatorjs';
 
 export const validate = (values) => {
+console.log(values)
   const rules = {
-    'agencyName': 'required',
+    agencyName: 'required',
     'agencyPhone': 'required',
     'agencyAddress.suite': 'required',
     'agencyAddress.street': 'required',

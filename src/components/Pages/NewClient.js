@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ClientRegisterForm from './Forms/ClientRegisterForm';
+import ClientRegister from './Register/ClientRegister';
 
 class NewClient extends Component {
 
     render() {
         return (
-            <ClientRegisterForm />
+            <ClientRegister />
         )
     }
 }

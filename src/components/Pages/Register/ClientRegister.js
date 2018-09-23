@@ -14,15 +14,15 @@ class ClientRegister extends Component {
     }
 
     render() {
-   // let { handleSubmit } = this.props;
-    }
+
+
 
                   return (
-                    <ClientRegisterForm onSubmit={handleSubmit}>
+                    <ClientRegisterForm onSubmit={this._submitForm}/>
 
-           // <ClientRegisterForm onSubmit={this._submitLogin} />
+
         )
     }
-}
 
+}
 export default ClientRegister;
