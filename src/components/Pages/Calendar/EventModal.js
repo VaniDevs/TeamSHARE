@@ -32,7 +32,7 @@ export default (props) => {
           <h2 className="c-heading">Modal heading</h2>
         </header>
 
-        <div className="c-card__body">
+        <div className="c-card__body o-panel">
           This is the modal body
         </div>
 
