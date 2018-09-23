@@ -5,7 +5,7 @@ import {
     FETCH_FIREBASE_USER,
     FETCH_USER_INFO
 } from './types';
-import { firebaseAuth, firebaseEmailAuthProvider, firebaseDb, configType } from '../utils/firebase';
+import { firebaseAuth, firebaseDb } from '../utils/firebase';
 
 export function registerUser(user) {
     // console.log('you submitted register', user)
