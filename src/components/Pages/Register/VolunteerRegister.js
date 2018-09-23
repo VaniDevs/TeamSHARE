@@ -6,6 +6,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { registerUser } from '../../../actions/authActions';
+
+import logo from "../../../imgs/logo.png";
+
 class VolunteerRegister extends Component {
     constructor(props){
       super(props)
@@ -26,7 +29,21 @@ class VolunteerRegister extends Component {
 
     render() {
            return (
-               <VolunteerRegisterForm onSubmit={this._submitForm} />
+               <div className="l-outside-page">
+                   <div className="b-outside-page">
+                       <header className="b-header">
+                           <img src={logo} className="b-header__logo" alt="BabyGoRound" />
+                           <h1>Volunteer Registration</h1>
+                       </header>
+                       <main className="b-outside-page__main">
+                           <VolunteerRegisterForm onSubmit={this._submitForm} />
+                       </main>
+                   </div>
+                   <div className="l-hide-on-mobile b-outside-page__splash">
+                       image here
+                </div>
+               </div>
+               
         )
     }
 }

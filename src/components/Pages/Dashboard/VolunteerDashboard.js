@@ -13,7 +13,7 @@ class VolunteerDashboard extends Component {
     render() {
         return (
             <div className="b-page b-dashboard">
-                <h1 className="b-page__header">Overview</h1>
+                <h1 className="b-page__header">Baby Go Round Overview</h1>
 
                 <div className="b-dashboard__stats">
                     <div className="c-card">
@@ -57,7 +57,7 @@ class VolunteerDashboard extends Component {
                     <div className="c-card">
                         <div className="c-card__body">
                             <h4>Appointments Calendar</h4>
-                            <div style={{ height: 400 }}>
+                            <div style={{ height: 600 }}>
                                 <BigCalendar
                                     localizer={localizer}
                                     events={events}

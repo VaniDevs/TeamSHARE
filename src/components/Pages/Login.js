@@ -10,7 +10,6 @@ import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router';
 
 import logo from "../../imgs/logo.png";
-import splash from "../../imgs/img1.jpg";
 
 class Login extends Component {
     constructor(props) {
@@ -43,7 +42,7 @@ class Login extends Component {
                     </main>
                 </div>
                 <div className="l-hide-on-mobile b-outside-page__splash">
-                    <img src={splash} className="b-outside-page__splash" />
+                    {/* <img src={splash} className="b-outside-page__splash" /> */}
                 </div>
             </div>
         )

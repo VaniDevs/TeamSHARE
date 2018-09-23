@@ -23,10 +23,10 @@ class Header extends Component {
                 <header>
                     <div className="o-grid o-grid--demo">
                         <div className="o-grid__cell o-grid__cell--width-40">
-                            {!sidebarDocked && <button type="button" onClick={openSidebar}>Open Sidebar</button>}
+                            {!sidebarDocked && <button type="button" className="b-header__link" onClick={openSidebar}>Open Sidebar</button>}
                         </div>
                         <div className="o-grid__cell o-grid__cell--width-20 o-grid__cell--offset-40" style={{ textAlign: 'right' }}>
-                            <button onClick={this._logoutUser} type="button">Logout</button>
+                            <button onClick={this._logoutUser} className="b-header__link" type="button">Logout</button>
                         </div>
                     </div>
                 </header>

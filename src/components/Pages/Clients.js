@@ -84,35 +84,21 @@ class Clients extends Component {
                   let {rowData} = props;
                   let status = rowData && rowData.status ? rowData.status : null;
                   return status === 'pending'?
-                  <div style={{padding: 0, margin: 0}} role="alert" className="c-alert c-alert--warning">Pending</div>
+                  <div style={{padding: 0, margin: 0}} className="c-badge c-badge--warning">Pending</div>
                   :
                   status === 'approved' ?
-                  <div style={{padding: 0, margin: 0}} role="alert" className="c-alert c-alert--success">Approved</div>
+                  <div style={{padding: 0, margin: 0}} className="c-badge c-badge--success">Approved</div>
                   : null
               })
           
         return (
             <div className="b-page">
-                <h1>Clients</h1>
+                <h1 className="b-page__header">Clients</h1>
                 {
                     type === 'agencyEmp' &&
-                <Link to="new-client">Add Client</Link>
+                    <p><Link to="new-client" className="c-button u-large">Add Client</Link></p>
                 }
-                {/* <Griddle
-                    data={data}
-                    plugins={[plugins.LocalPlugin, PageSizeDropDownPlugin({ pageSizes: [10, 20, 30] }, this._handlePageSizeChange)]}
-                    settingsComponentObjects={{ columnChooser: null }}
-                    components={{ Filter, Layout: GriddleLayout }}
-                    styleConfig={{
-                        classNames: {
-                            Table: "griddle-table b0 table table-striped table-hover dataTable  ",
-                            PageDropdown: 'griddle-page-select form-control',
-                            NextButton: "griddle-next-button btn",
-                            Pagination: "griddle-pagination pull-right",
-                            PreviousButton: "griddle-previous-button btn",
-                        }
-                    }}
-                / > */}
+
                 <Griddle
                     data={data}
                     plugins={[plugins.LocalPlugin, PageSizeDropDownPlugin({ pageSizes: [10, 20, 30] }, this._handlePageSizeChange)]}
@@ -126,10 +112,10 @@ class Clients extends Component {
                             TableBody: 'griddle-table-body c-table__body',
                             Row: 'griddle-row c-table__row  c-table__row--clickable',
                             Cell: 'griddle-cell c-table__cell',
-                            PageDropdown: 'griddle-page-select form-control',
-                            NextButton: "griddle-next-button btn",
-                            Pagination: "griddle-pagination pull-right",
-                            PreviousButton: "griddle-previous-button btn",
+                            PageDropdown: 'griddle-page-select c-field',
+                            NextButton: "griddle-next-button c-button",
+                            Pagination: "griddle-pagination b-field",
+                            PreviousButton: "griddle-previous-button c-button",
                         }
                     }}
                 >

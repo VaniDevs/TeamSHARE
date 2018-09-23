@@ -94,7 +94,8 @@ class Agencies extends Component {
 
         
         return (
-            <div>
+            <div className="b-page">
+            <h1 className="b-page__header">Agencies</h1>
                 <Griddle
                     data={data}
                     plugins={[plugins.LocalPlugin, PageSizeDropDownPlugin({ pageSizes: [10, 20, 30] }, this._handlePageSizeChange)]}
@@ -108,10 +109,10 @@ class Agencies extends Component {
                             TableBody: 'griddle-table-body c-table__body',
                             Row: 'griddle-row c-table__row  c-table__row--clickable',
                             Cell: 'griddle-cell c-table__cell',
-                            PageDropdown: 'griddle-page-select form-control',
-                            NextButton: "griddle-next-button btn",
-                            Pagination: "griddle-pagination pull-right",
-                            PreviousButton: "griddle-previous-button btn",
+                            PageDropdown: 'griddle-page-select c-field',
+                            NextButton: "griddle-next-button c-button",
+                            Pagination: "griddle-pagination c-field",
+                            PreviousButton: "griddle-previous-button c-button",
                         }
                     }}
                 >
