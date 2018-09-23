@@ -15,6 +15,8 @@ class LoginForm extends Component {
         <Field component={renderField} name="email" id="name" type="email" label="Email" />
         <Field component={renderField} name="password" id="name" type="password" label="Password" />
 
+        <p>Forgot Password?</p>
+
         <button type="submit">Submit</button>
       </form>
     )
