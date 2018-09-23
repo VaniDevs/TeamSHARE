@@ -16,7 +16,7 @@ export const validate = (values) => {
 
   const errorMsg = {
   "required.name": "Please enter a name",
-
+  "required.phone":"Please enter your phone number",
     "required.email": "Please enter an email address",
     "email.email": "Please enter a valid email address",
     "required.password": "Please enter a password for your account",
