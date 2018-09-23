@@ -13,7 +13,7 @@ class Register extends Component {
       this.registerAgency = this.registerAgency.bind(this);
     }
 
-    registerAgency(values) {
+    _submitForm(values) {
         console.log('values', values);
         
         this.props.registerUser({
@@ -25,13 +25,12 @@ class Register extends Component {
             }
         })
     }
-    
+    _submitForm(values) {
+            console.log('values', values)
+        }
     render() {
         return (
-            <section>
-                <h1>Agency Registration </h1>
-                <AgencyRegisterForm onSubmit={this.registerAgency} />
-            </section>
+        <AgencyRegisterForm onSubmit={this._submitForm} />
         )
     }
 }

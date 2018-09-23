@@ -3,6 +3,28 @@ import { Field, reduxForm } from 'redux-form';
 import { renderField } from '../../../utils/renderForms';
 
 import { normalizePhone } from '../../../utils/helper';
+import Validator from 'validatorjs';
+
+export const validate = (values) => {
+  const rules = {
+  }
+
+  const errorMsg = {
+  }
+
+  const validator = new Validator(values, rules, errorMsg)
+  validator.passes();
+
+  const extraValidation = (values) => {
+    const errors = {}
+    return errors
+  }
+
+  return {
+    ...extraValidation(values),
+    ...validator.errors.all()
+  }
+}
 
 class AgencyRegisterForm extends Component {
   constructor(props) {
@@ -43,6 +65,7 @@ class AgencyRegisterForm extends Component {
 
           <Field component={renderField} name="verifyPassword" id="agentVerifyPassword" type="password" label="Verify Agent Password" cssMainClassName="" />
         </fieldset>
+        <Field component={renderField} name="terms" id="terms" type="checkbox" terms={true} cssMainClassName="" />
 
         <button type="submit">Register</button>
       </form>
@@ -52,7 +75,8 @@ class AgencyRegisterForm extends Component {
 
 AgencyRegisterForm = reduxForm({
   form: 'agencyRegForm',
-  enableReinitialize: true
+  enableReinitialize: true,
+  validate
 })(AgencyRegisterForm)
 
 
