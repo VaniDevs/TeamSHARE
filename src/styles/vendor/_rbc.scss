@@ -1,0 +1,29 @@
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+
+.rbc-calendar {
+  // height: 100%;
+}
+
+.rbc-toolbar {
+  flex-wrap: nowrap;
+}
+
+.griddle-table-heading > tr {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex: 0 0 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.c-table__cell {
+  align-items: center;
+}
+
+.c-badge {
+  padding: gutter() !important;
+  font-size: 0.9em;
+}

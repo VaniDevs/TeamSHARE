@@ -8,6 +8,8 @@ import { BrowserRouter } from 'react-router-dom'
 import store from './store'
 import registerServiceWorker from './registerServiceWorker';
 
+import './utils/firebase';
+
 ReactDOM.render(
     <BrowserRouter>
         <Provider store={store}>  

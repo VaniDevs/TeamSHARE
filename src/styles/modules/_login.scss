@@ -1,0 +1,22 @@
+.l-login-container {
+  // background-image: url('../img/burger-bg.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+
+.b-login {
+  > div {
+    margin: 0;
+  }
+
+  &--left {
+    padding: 50px;
+    @include span(4); 
+  }
+  &--right {
+    padding: 0;
+    height: 100vh;
+    background-color: rgba($brand-blue, 0.8);
+    @include span(8); 
+  }
+}

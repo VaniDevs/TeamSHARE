@@ -1,0 +1,22 @@
+.b-sidebar {
+  &__logo {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+  // color: $brand-lightgray;
+  &__nav {
+    margin-top: span(3);
+  }
+
+  &__nav-list {
+    padding-left: gutter();
+    // font-weight: 700;
+  }
+
+  &__nav-link {
+    display: block;
+    margin-bottom: gutter();
+    padding: gutter()*2;
+  }
+}

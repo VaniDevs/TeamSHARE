@@ -1,0 +1,66 @@
+.l-float {
+  @include susy-clearfix();
+  
+  @media (min-width: 768px) {
+    .l-float-4-first {
+      @include span(4 first);
+    }
+
+    .l-float-4-last {
+      @include span(4 last);
+    }
+
+    .l-float-6-last {
+      @include span(6 last);
+    }
+
+    .l-float-6-first {
+      @include span(6 first);
+    } 
+
+    .l-float-8-last {
+      @include span(8 last);
+    }
+
+    .l-float-8-first {
+      @include span(8 first);
+    } 
+  }
+}
+
+.l-two-column {
+  columns: 1;
+  width: 100%; 
+
+  @media (min-width: 768px) {
+    columns: 2;        
+  }
+
+  .o-fieldset {
+    padding: 0 span(1);
+
+    // don't break the columns
+    overflow: hidden; /* fix for Firefox */
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+  }
+}
+
+.b-detail {
+  margin-bottom: gutter()*2;
+
+  &__label {
+    margin-bottom: gutter();
+    font-family: $head-type;
+  }
+
+  &__value {
+    margin-left: 0;
+  }
+}
+
+.l-hide-on-mobile {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

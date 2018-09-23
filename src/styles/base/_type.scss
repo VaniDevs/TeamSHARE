@@ -1,0 +1,39 @@
+body {
+  font-family: $body-type;
+  letter-spacing: 0.029em;
+  color: $brand-type;
+  line-height: 1.3;
+}
+
+h1, h4 {
+  font-family: $head-type;
+}
+
+h4 {
+  font-size: 1.2em;
+  // color: $brand-secondary;
+}
+
+section {
+  h1 {
+   font-size: 1.7em; 
+  }
+}
+
+.b-header__link, a {
+  border: none;
+  background: none;
+  text-decoration: none;
+  transition: all 350ms cubic-bezier(0.77, 0, 0.175, 1);
+  color: darken($brand-blue, 38%);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.b-header__link {
+  margin-top: gutter();
+  padding: gutter();
+}

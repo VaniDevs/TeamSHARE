@@ -1,0 +1,26 @@
+.l-center-screen {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: pink;
+  min-height: 100vh;
+
+  & > div {    
+    padding: span(1);
+  }
+}
+
+.sr-only {
+    position: absolute !important; /* Outside the DOM flow */
+    height: 1px; width: 1px; /* Nearly collapsed */
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE 7+ only support clip without commas */
+    clip: rect(1px, 1px, 1px, 1px); /* All other browsers */
+}
+
+.griddle-pagination {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .c-field { width: auto; margin: 0 gutter();}
+}

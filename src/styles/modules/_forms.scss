@@ -1,0 +1,46 @@
+.b-form {
+  width: 100%;
+  
+  &--padded {
+    margin: span(1) 0;
+    padding: 0 gutter();
+  }
+}
+
+.b-field, 
+.b-field--react-select {
+  margin-bottom: 15px;
+}
+
+.b-field--react-select {
+  display: block;
+}
+
+.b-field {
+  &__label {
+    display: block;
+    margin-bottom: gutter()/2;
+  }
+
+  &__error {
+    margin-top: gutter()/2;
+    color: #ee0202;
+    font-size: 0.9em;
+  }
+}
+
+.o-fieldset__legend {
+  font-family: $head-type;
+  font-size: 1.1em;
+  margin: gutter()*2 0 gutter();
+}
+
+.b-button--brand {
+  background-color: $brand-secondary !important;
+  color: $brand-white;
+}
+
+
+.b-header {
+  text-align: center;
+}

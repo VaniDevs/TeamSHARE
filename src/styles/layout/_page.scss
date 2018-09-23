@@ -1,0 +1,20 @@
+.l-outside-page {
+  height: 100%;
+  min-height: 100vh;
+  // background-color: #fff;
+}
+
+.b-page {
+  &__breadcrumb {
+    color: $brand-gray;
+    font-size: 0.9em;
+  }
+
+  &__header {
+    margin: 0 0 gutter()*2;
+  }
+}
+
+.b-section {
+  margin-bottom: gutter()*2;
+}

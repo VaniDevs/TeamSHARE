@@ -1,0 +1,28 @@
+.b-modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(174, 174, 174, 0.41);
+  z-index: 4;
+} 
+
+.b-modal {
+  position: absolute;
+  top: 40px;
+  left: span(1);
+  right: span(1);
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+  overflow: auto;
+  border-radius: 4px;
+  outline: currentcolor none medium;
+  padding: 20px;
+  z-index: 5;
+
+  @media (min-width: 768px) {
+    left: span(3);
+    right: span(3);
+  }
+}

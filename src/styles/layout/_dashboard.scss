@@ -1,0 +1,106 @@
+body {
+  background-color: #f9fafb;
+  // background-color: $brand-lightgray;
+}
+
+.l-container {
+  @include container();  
+  overflow: auto !important;
+
+  .l-sidebar-container {    
+    @include span(5 first);          
+    padding: gutter()/2 span(1)/3;
+    background-color: $brand-white;
+    box-shadow: none !important;
+    // background-color: $brand-lightgray;
+  }  
+
+  /* Responsive Layout */
+    @media (min-width: 768px) {
+    .l-sidebar-container {
+      position: fixed !important;
+      @include span(3 first);      
+    }
+
+    .l-outer-main {
+      position: static !important;
+      @include span(9 last);      
+    }    
+  }
+  @media (min-width: 1440px) {
+    .l-sidebar-container {
+      position: fixed !important;
+      @include span(2 first);      
+    }
+
+    .l-outer-main {
+      position: static !important;
+      @include span(10 last);      
+    }        
+  }
+
+  .l-center-container {
+    @media (min-width: 768px) {
+      width: span(7);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1440px) {
+      width: span(5);
+      margin: 0 auto;
+    }
+  }
+  
+  .b-main { 
+    padding: gutter();
+    min-height: calc(100vh - 70px);
+  }  
+
+  .b-footer {
+    height: 50px;
+  }
+}
+
+.l-outside-page {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100vh;
+  height: 100%;
+}
+
+// Login / Register
+
+.b-outside-page {
+    // padding: span(1);
+    flex: 1 1 100%;
+    justify-content: center;
+    background-color: #fff;
+
+  @media (min-width: 768px) {
+    padding: span(1);
+    flex: 0 1 85%;
+    
+  }
+
+  @media (min-width: 1280px) {
+    padding: span(1);
+    flex: 0 1 60%;
+  }  
+
+  &__main {
+    display: flex;
+  }
+
+  &__splash {
+    flex: 1;
+    background-color: $brand-lightgray;
+    background-image: url('../imgs/login-hands.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .b-header__logo {
+    margin-bottom: span(2);
+  }
+}
