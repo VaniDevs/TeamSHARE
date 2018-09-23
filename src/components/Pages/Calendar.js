@@ -16,12 +16,14 @@ class Calendar extends Component {
     return (
       <div className="b-page">
         <h1 className="b-page__header">Calendar</h1>
-        <BigCalendar 
-          localizer={localizer}
-          events={events}
-          startAccessor="start"
-          endAccessor="end"
-        />
+        <div style={{ height: 800 }}>
+          <BigCalendar
+            localizer={localizer}
+            events={events}
+            startAccessor="start"
+            endAccessor="end"
+          />
+        </div>
       </div>
     )
   }

@@ -2,6 +2,45 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { renderField, renderSelect } from '../../../utils/renderForms';
 
+import Validator from 'validatorjs';
+
+export const validate = (values) => {
+  const rules = {
+    name: 'required'
+  }
+
+  const errorMsg = {
+  }
+
+  const validator = new Validator(values, rules, errorMsg)
+  validator.passes();
+
+  const extraValidation = (values) => {
+    const errors = {}, clientAddress = {};
+
+    // console.log('values wtf', values);
+
+    // if (values.demographic && values.demographic.length === 0) {
+    //   console.log(values.demographic.length);
+    //   errors.demographic = "Please select at least one demographic for the client"
+    // }
+
+    // if(values && values.clientAddress && !values.clientAddress.suite) {
+    //   errors.clientAddress = { 
+    //     suite: "Please enter a suite number"
+    //   }
+    // }
+
+    // console.log('errors', errors)
+    return errors
+  }
+
+  return {
+    ...extraValidation(values),
+    ...validator.errors.all()
+  }
+}
+
 class ClientRegisterForm extends Component {
   render() {
     let { handleSubmit } = this.props,
@@ -60,6 +99,7 @@ class ClientRegisterForm extends Component {
           <Field component={renderField} name="potentialAppointmentTimeDate" id="potentialAppointmentTime" type="time" label="Potential Appointment Time" />
         </fieldset>
 
+        <button type="submit">Register</button>
         
       </form>
     )
@@ -68,7 +108,8 @@ class ClientRegisterForm extends Component {
 
 ClientRegisterForm = reduxForm({
   form: 'clientRegisterForm',
-  enableReinitialize: true
+  enableReinitialize: true,
+  validate
 })(ClientRegisterForm)
 
 export default ClientRegisterForm;
