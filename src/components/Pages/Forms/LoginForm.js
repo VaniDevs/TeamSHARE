@@ -8,7 +8,8 @@ import Validator from 'validatorjs';
 export const validate = (values) => {
   const rules = {
     email: 'required|email',
-    password: 'required|max:6'
+    password: 'required|min:6'
+
   }
 
   const errorMsg = {
