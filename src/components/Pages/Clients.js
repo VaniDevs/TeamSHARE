@@ -59,7 +59,7 @@ class Clients extends Component {
             rowData: plugins.LocalPlugin.selectors.rowDataSelector(state, props)
           }));
         const viewBtn = EnhanceWithRowData(props => {
-            return <button type="button" className="c-button" onClick={() => { return this._openClientModal(props.rowData) }}>View</button>
+            return <button type="button" className="c-button b-button--brand" onClick={() => { return this._openClientModal(props.rowData) }}>View</button>
         });
 
         let data = clients,

@@ -7,8 +7,8 @@ const initialState = {
     {
       label: 'Families Helped',
       fill: false,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
+      backgroundColor: '#A7D5F5',
+      borderColor: '#A7D5F5',
       borderCapStyle: 'butt',
       data: [10, 10, 8, 10, 15, 20, 24, 22, 26]
     }

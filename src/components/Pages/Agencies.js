@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Griddle, { plugins, RowDefinition, ColumnDefinition } from 'griddle-react';
 import { Filter, GriddleLayout, PageSizeDropDownPlugin } from '../../utils/griddle';
+import { connect } from 'react-redux';
 
 import { agencies } from "../../data/staticTableData";
 class Agencies extends Component {
@@ -84,6 +85,14 @@ class Agencies extends Component {
         //     "numClients": 10,
         //     "address": "#201, 190 Alexander Street"
         // }]
+        const EnhanceWithRowData = connect((state, props) => ({
+            rowData: plugins.LocalPlugin.selectors.rowDataSelector(state, props)
+          }));
+        const viewBtn = EnhanceWithRowData(props => {
+            return <button type="button" className="c-button b-button--brand" onClick={() => { return this._openClientModal(props.rowData) }}>View</button>
+        });
+
+        
         return (
             <div>
                 <Griddle
@@ -112,6 +121,7 @@ class Agencies extends Component {
                         <ColumnDefinition id="phone" title="Phone" />
                         <ColumnDefinition id="numClients" title="# of Clients" />
                         <ColumnDefinition id="address" title="Street Adress" />
+                        <ColumnDefinition id="add" title="View" customComponent={viewBtn} />
                     </RowDefinition>
                 </Griddle>
               

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Griddle, { plugins, RowDefinition, ColumnDefinition } from 'griddle-react';
 import { Filter, GriddleLayout, PageSizeDropDownPlugin } from '../../utils/griddle';
+import { connect } from 'react-redux';
 
 import { inventory } from "../../data/staticTableData";
 class Inventory extends Component {
@@ -22,6 +23,13 @@ class Inventory extends Component {
 
     render() {
         const data = inventory;
+        const EnhanceWithRowData = connect((state, props) => ({
+            rowData: plugins.LocalPlugin.selectors.rowDataSelector(state, props)
+          }));
+        const viewBtn = EnhanceWithRowData(props => {
+            return <button type="button" className="c-button b-button--brand" onClick={() => { return this._openClientModal(props.rowData) }}>+</button>
+        });
+
         return (
             <div>
                 <Griddle
@@ -43,7 +51,15 @@ class Inventory extends Component {
                             PreviousButton: "griddle-previous-button btn",
                         }
                     }}
-                / >
+                >
+                    <RowDefinition>
+                        <ColumnDefinition id="name" title="Name" metadata={true} />
+                        <ColumnDefinition id="available" title="Available" />
+                        <ColumnDefinition id="pending" title="Pending" />
+                        <ColumnDefinition id="reserved" title="Reserved" />
+                        <ColumnDefinition id="add" title="Add Inventory" customComponent={viewBtn} />
+                    </RowDefinition>
+                </Griddle>
                 {/* <Griddle
                     data={data}
                     plugins={[plugins.LocalPlugin, PageSizeDropDownPlugin({ pageSizes: [10, 20, 30] }, this._handlePageSizeChange)]}
