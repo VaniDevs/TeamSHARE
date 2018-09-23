@@ -12,47 +12,37 @@ class VolunteerDashboard extends Component {
 
     render() {
         return (
-        <div className="b-page">
-          <h1 className="b-page__header">Overview</h1>
+            <div className="b-page b-dashboard">
+                <h1 className="b-page__header">Overview</h1>
 
-            
-                <div className="o-grid o-grid--demo">
-                <div className="o-grid__cell">
-                    <div className="o-grid-text">
-                        <div className="c-card">
-                            <div className="c-card__body">
-                                <h4>
-                                <CountUp 
+                <div className="b-dashboard__stats">
+                    <div className="c-card">
+                        <div className="c-card__body">
+                            <h4>
+                                <CountUp
                                     start={0}
                                     end={122}
                                 />
                                 &nbsp;Families</h4>
-                                <p>Helped This Month</p>
-                            </div>
+                            <p>Helped This Month</p>
                         </div>
                     </div>
-                </div>
-                <div className="o-grid__cell">
-                    <div className="o-grid-text">
+
                     <div className="c-card">
                         <div className="c-card__body">
                             <h4>
-                                <CountUp 
+                                <CountUp
                                     start={0}
                                     end={432}
                                 />&nbsp;Items</h4>
                             <p>Donated This Month</p>
                         </div>
                     </div>
-                     
-                    </div>
-                </div>
-                <div className="o-grid__cell">
-                    <div className="o-grid-text">
+
                     <div className="c-card">
                         <div className="c-card__body">
                             <h4>
-                                <CountUp 
+                                <CountUp
                                     start={0}
                                     end={444}
                                 />&nbsp;
@@ -60,45 +50,39 @@ class VolunteerDashboard extends Component {
                             <p>Volunteered This Month</p>
                         </div>
                     </div>
-                    </div>
                 </div>
-                </div>
+                {/* end dashboard stats */}
 
-
-                <div className="o-grid o-grid--demo">
-                    <div className="o-grid__cell">
-                        <div className="o-grid-text">
-                        <div className="c-card">
-                            <div className="c-card__body">
-                                <h4>Appointments Calendar</h4>
-                                    <div style={{ height: 400 }}>
-                                        <BigCalendar
-                                            localizer={localizer}
-                                            events={events}
-                                            startAccessor="start"
-                                            endAccessor="end"
-                                        />
-                                </div>
+                <div className="b-dashboard--left">
+                    <div className="c-card">
+                        <div className="c-card__body">
+                            <h4>Appointments Calendar</h4>
+                            <div style={{ height: 400 }}>
+                                <BigCalendar
+                                    localizer={localizer}
+                                    events={events}
+                                    startAccessor="start"
+                                    endAccessor="end"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="o-grid__cell">
-                    <div className="o-grid-text">
+                <div className="b-dashboard--right">
                     <div className="c-card">
-                    <div role="separator" className="c-card__item c-card__item--divider">Inventory Stock</div>
+                        <div role="separator" className="c-card__item c-card__item--divider">Inventory Stock</div>
                         <div className="c-card__item  ">
                             <p className="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
                             <p className="c-paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
                         </div>
                     </div>
+
                     <div className="c-card">
-                    <div role="separator" className="c-card__item c-card__item--divider">Volunteer Updates</div>
+                        <div role="separator" className="c-card__item c-card__item--divider">Volunteer Updates</div>
                         <div className="c-card__item  ">
                             <p>As per new government rules, it's mandatory to do ...</p>
                         </div>
-                    </div>
                     </div>
 
                     <div className="c-card">
@@ -108,8 +92,7 @@ class VolunteerDashboard extends Component {
                         </div>
                     </div>
                 </div>
-                </div>
-        </div>
+            </div>
         )
     }
 }

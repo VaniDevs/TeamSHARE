@@ -1,0 +1,29 @@
+.b-dashboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  &__stats {
+    flex: 1 1 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-bottom: gutter();
+  }
+
+  &--right,
+  &--left {
+    width: 100%;
+    margin-bottom: gutter();
+  }
+
+  @media (min-width: 1440px) {
+    &--left {
+      width: 66.35%;
+    }
+
+    &--right {
+      width: 32.5%;
+    }
+  }
+}

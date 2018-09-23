@@ -10,6 +10,14 @@
       @include span(4 last);
     }
 
+    .l-float-6-last {
+      @include span(6 last);
+    }
+
+    .l-float-6-first {
+      @include span(6 first);
+    } 
+
     .l-float-8-last {
       @include span(8 last);
     }

@@ -29,7 +29,7 @@ export default (props) => {
       <div className="c-card">
         <header className="c-card__header">
           <button type="button" onClick={closeModal} className="c-button c-button--close">&times;</button>
-          <h2 className="c-heading">Modal heading</h2>
+          <h2 className="c-heading">Appointment Details</h2>
         </header>
 
         <div className="c-card__body o-panel">
