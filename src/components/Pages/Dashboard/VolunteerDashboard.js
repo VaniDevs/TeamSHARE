@@ -12,9 +12,9 @@ class VolunteerDashboard extends Component {
 
     render() {
         return (
-         <div>
-            <p>Volunteer Dashboard</p>
-            <h1 className="b-page__header">Overview</h1>
+        <div className="b-page">
+          <h1 className="b-page__header">Volunteer Overview</h1>
+
             <div className="o-panel-container">
                 <div>
                     <h4>Inventory Stock</h4>
@@ -66,7 +66,7 @@ class VolunteerDashboard extends Component {
 
                 <p>Some kind of Bar Chart of Personal Chart?</p>
             </div>
-        </div>   
+        </div>
         )
     }
 }

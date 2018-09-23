@@ -19,16 +19,17 @@ $susy: (
 @import 'layout/dashboard';
 // @import 'layout/header';
 @import 'layout/sidebar';
-// @import 'layout/footer';
+@import 'layout/footer';
 // @import 'layout/utils';
 @import 'layout/page';
 
 /* Modules/Components */
 
-// @import 'modules/forms';
+@import 'modules/modal';
 // @import 'modules/card-list';
 @import 'modules/login';
 
 /* Vendor Styles */
 
 @import 'vendor/rbc';
+@import 'vendor/blaze';

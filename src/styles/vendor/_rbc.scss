@@ -1,3 +1,9 @@
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+
 .rbc-calendar {
   // height: 100%;
+}
+
+.rbc-toolbar {
+  flex-wrap: nowrap;
 }
