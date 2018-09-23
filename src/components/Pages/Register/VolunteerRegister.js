@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import AgencyRegisterForm from '../Forms/AgencyRegisterForm';
-import { Field, reduxForm } from 'redux-form';
-import { renderField } from '../../../utils/renderForms';
 import VolunteerRegisterForm from '../Forms/VolunteerRegisterForm';
 
 class VolunteerRegister extends Component {
@@ -13,8 +10,6 @@ class VolunteerRegister extends Component {
             console.log('values', values)
         }
     render() {
-
-     //let { handleSubmit } = this.props;
            return (
                <VolunteerRegisterForm onSubmit={this._submitForm} />
         )
