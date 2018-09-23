@@ -5,7 +5,6 @@ import { Route } from 'react-router-dom'
 import Dashboard from '../Pages/Dashboard';
 import NewClient from '../Pages/NewClient';
 import Team from '../Pages/Team';
-import Calendar from '../Pages/Calendar';
 
 /* Utils Pages */
 import NotFound404 from '../Pages/NotFound404';
