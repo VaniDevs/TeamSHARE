@@ -15,7 +15,7 @@ $susy: (
 
 /* Layout Styles */
 
-// @import 'layout/floats';
+@import 'layout/floats';
 @import 'layout/dashboard';
 // @import 'layout/header';
 @import 'layout/sidebar';
@@ -26,6 +26,7 @@ $susy: (
 /* Modules/Components */
 
 @import 'modules/modal';
+@import 'modules/forms';
 // @import 'modules/card-list';
 // @import 'modules/login';
 

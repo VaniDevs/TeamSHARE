@@ -59,7 +59,7 @@ class AgencyRegisterForm extends Component {
     let { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="l-two-column">
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Agency Information</legend>
           <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />
@@ -92,7 +92,7 @@ class AgencyRegisterForm extends Component {
         </fieldset>
         <Field component={renderField} name="terms" id="terms" type="checkbox" terms={true} cssMainClassName="" />
 
-        <button type="submit">Register</button>
+        <button type="submit" className="b-button--brand c-button c-button--block u-medium">Register</button>
       </form>
     )
   }

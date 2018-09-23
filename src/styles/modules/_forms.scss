@@ -1,128 +1,25 @@
-.b-fieldset {
-  border: none;
-  padding: 0;
-
-  &__legend {
-    margin-bottom: gutter();
-    padding: 0;
-    font-size: 1.35em;
-    font-weight: 600;
-    color: $bg-sidebargray;
-  }
-}
-
-.b-form-group {
-  margin-bottom: gutter();
-
-  &__label {
-    margin-bottom: gutter()/2;    
-    font-weight: 500;        
-  }
-}
-
-.b-form {
-  &__field--inline {
-    display: inline-block;
-    margin-right: gutter()*2; 
-  }
-}
-
 .b-field {
+  margin-bottom: 15px;
+
   &__label {
     display: block;
+    margin-bottom: gutter()/2;
   }
 
   &__error {
-    margin-top: 6px;
-    color: $error-red;
+    margin-top: gutter()/2;
+    color: #ee0202;
+    font-size: 0.9em;
   }
 }
 
-abbr {
-  color: $error-red;
-  text-decoration: none !important;
+.o-fieldset__legend {
+  font-family: $head-type;
+  font-size: 1.1em;
+  margin-bottom: gutter()*2;
 }
 
-/* WTF-forms */
-.b-control {
-  position: relative;
-  display: inline-block;
-  // padding-left: 1.5rem;
-  color: #555;  
-  cursor: pointer;
-  width: auto;
-}
-
-// .b-control input {
-.b-control__input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1; /* Put the input behind the label so it doesn't overlay text */
-}
-
-.b-control__indicator {
-  display: inline-block;
-  vertical-align: top;
-  width:  0.9rem;
-  height: 0.9rem;
-  // margin: 0 8px;
-  margin-right: 5px;
-  border: 1px solid #c1c3c5;
-  line-height: 1rem;
-  font-size: 65%;
-  color: $bg-darkgray;
-  text-align: center;
-  background-color: #fff;
-  // background-size: 45% 45%;
-  background-size: 50% 50%;
-  background-position: center center;
-  background-repeat: no-repeat;
-          user-select: none;
-}
-
-.b-control--left {
-  position: absolute;
-  top: .25rem;
-  left: 0;
-  display: block;
-}
-
-/* Focus */
-.b-control__input:focus ~ .b-control__indicator {
-// .b-control input:focus ~ .b-control__indicator {
-  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem $bg-darkgray;
-  // box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
-}
-
-/* Checked state */
-.b-control__input:checked ~ .b-control__indicator {
-  color: $bg-darkgray;
-  background-color: $bg-darkgray;
-  // background-color: #0074d9;
-}
-
-/* Checked state when something's disabled -> usually for declined panel on quote static */
-.b-control__input:disabled ~ .b-control__indicator,
-.b-control__input:checked:disabled ~ .b-control__indicator  {    
-    color: darken($bg-lightgray, 15%) !important;
-    background-color: darken($bg-lightgray, 15%) !important;    
-}
-
-.b-control__input:disabled ~ .b-control__indicator {
-  color: darken($bg-lightgray, 5%) !important;
-  background-color: darken($bg-lightgray, 5%) !important;    
-}
-
-/* Active */
-.b-control__input:active ~ .b-control__indicator {  
-  color: #fff;
-  // background-color: #84c6ff;
-}
-
-/* Radio modifiers */
-.b-radio .b-control__indicator {
-  border-radius: 50%;
-}
-.b-radio .b-control__input:checked ~ .b-control__indicator {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+.b-button--brand {
+  background-color: $brand-secondary !important;
+  color: $brand-white;
 }

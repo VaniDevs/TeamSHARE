@@ -1,3 +1,9 @@
+.l-outside-page {
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
 .b-page {
   &__breadcrumb {
     color: $brand-gray;

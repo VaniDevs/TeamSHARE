@@ -1,21 +1,41 @@
 .l-float {
   @include susy-clearfix();
   
-  .l-float-4-first {
-    @include span(4 first);
+  @media (min-width: 768px) {
+    .l-float-4-first {
+      @include span(4 first);
+    }
+
+    .l-float-4-last {
+      @include span(4 last);
+    }
+
+    .l-float-8-last {
+      @include span(8 last);
+    }
+
+    .l-float-8-first {
+      @include span(8 first);
+    } 
+  }
+}
+
+.l-two-column {
+  columns: 1;
+  width: 100%; 
+
+  @media (min-width: 768px) {
+    columns: 2;        
   }
 
-  .l-float-4-last {
-    @include span(4 last);
-  }
+  .o-fieldset {
+    padding: 0 span(1);
 
-  .l-float-8-last {
-    @include span(8 last);
+    // don't break the columns
+    overflow: hidden; /* fix for Firefox */
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
   }
-
-  .l-float-8-first {
-    @include span(8 first);
-  } 
 }
 
 .b-detail {
@@ -28,5 +48,11 @@
 
   &__value {
     margin-left: 0;
+  }
+}
+
+.l-hide-on-mobile {
+  @media (max-width: 768px) {
+    display: none;
   }
 }
