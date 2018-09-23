@@ -37,6 +37,7 @@
     "raf": "3.4.0",
     "react": "^16.5.2",
     "react-big-calendar": "^0.20.1",
+    "react-countup": "^4.0.0-alpha.6",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.2",
     "react-modal": "^3.5.1",
