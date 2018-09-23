@@ -88,10 +88,10 @@ class Clients extends Component {
           
         return (
             <div className="b-page">
-                <h1>Clients</h1>
+                <h1 className="b-page__header">Clients</h1>
                 {
                     type === 'agencyEmp' &&
-                <Link to="new-client">Add Client</Link>
+                    <p><Link to="new-client" className="c-button u-large">Add Client</Link></p>
                 }
                 {/* <Griddle
                     data={data}
@@ -121,10 +121,10 @@ class Clients extends Component {
                             TableBody: 'griddle-table-body c-table__body',
                             Row: 'griddle-row c-table__row  c-table__row--clickable',
                             Cell: 'griddle-cell c-table__cell',
-                            PageDropdown: 'griddle-page-select form-control',
-                            NextButton: "griddle-next-button btn",
-                            Pagination: "griddle-pagination pull-right",
-                            PreviousButton: "griddle-previous-button btn",
+                            PageDropdown: 'griddle-page-select c-field',
+                            NextButton: "griddle-next-button c-button",
+                            Pagination: "griddle-pagination b-field",
+                            PreviousButton: "griddle-previous-button c-button",
                         }
                     }}
                 >

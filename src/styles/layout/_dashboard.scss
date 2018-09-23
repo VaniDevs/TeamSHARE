@@ -94,6 +94,10 @@ body {
   &__splash {
     flex: 1;
     background-color: $brand-lightgray;
+    background-image: url('../imgs/login-hands.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .b-header__logo {
