@@ -2,6 +2,63 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { renderField, renderSelect } from '../../../utils/renderForms';
 
+import Validator from 'validatorjs';
+
+export const validate = (values) => {
+  const rules = {
+    name: 'required',
+    email: 'required|email',
+    phone: 'required',
+    dateOfBirth:'required',
+    gender: 'required',
+    nationality: 'required',
+    demographic: 'required',
+    familyAnnualIncome: 'required',
+    clientAddress: {
+  suite: 'required',
+    },
+
+    'clientAddress.street': 'required',
+    'clientAddress.city': 'required',
+    'clientAddress.prov': 'required',
+    'clientAddress.country': 'required',
+   'clientAddress.postalCode': 'required',
+   'clientBabyInfo.name': 'required',
+   'clientBabyInfo.dateOfBirth': 'required',
+   'clientBabyInfo.gender': 'required',
+    password: 'required|min:6',
+    verifyPassword: 'same:password',
+    gearRequested: 'required',
+    potentialAppointmentDate: 'required',
+    potentialAppointmentTimeDate: 'required'
+
+
+  }
+
+  const errorMsg = {
+  "required.name": "Please enter a name",
+  "required.phone":"Please enter your phone number",
+    "required.email": "Please enter an email address",
+    "email.email": "Please enter a valid email address",
+    "required.password": "Please enter a password for your account",
+    "min.password": "Please enter a password with 6 or more characters",
+    "same.verifyPassword": "please retype your password"
+  }
+
+  const validator = new Validator(values, rules, errorMsg)
+  validator.passes();
+
+  const extraValidation = (values) => {
+    const errors = {}
+    return errors
+  }
+
+  return {
+    ...extraValidation(values),
+    ...validator.errors.all()
+  }
+}
+
 class ClientRegisterForm extends Component {
   render() {
     let { handleSubmit } = this.props,
@@ -60,7 +117,11 @@ class ClientRegisterForm extends Component {
           <Field component={renderField} name="potentialAppointmentTimeDate" id="potentialAppointmentTime" type="time" label="Potential Appointment Time" />
         </fieldset>
 
+        <button type="submit">Register</button>
+<<<<<<< HEAD
+=======
         
+>>>>>>> feat-calendar
       </form>
     )
   }
@@ -68,7 +129,8 @@ class ClientRegisterForm extends Component {
 
 ClientRegisterForm = reduxForm({
   form: 'clientRegisterForm',
-  enableReinitialize: true
+  enableReinitialize: true,
+  validate
 })(ClientRegisterForm)
 
 export default ClientRegisterForm;

@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import AgencyRegisterForm from '../Forms/AgencyRegisterForm';
-import { Field, reduxForm } from 'redux-form';
-import { renderField } from '../../../utils/renderForms';
 import VolunteerRegisterForm from '../Forms/VolunteerRegisterForm';
 import { withRouter } from 'react-router';
 
@@ -28,8 +25,6 @@ class VolunteerRegister extends Component {
     }
 
     render() {
-
-     //let { handleSubmit } = this.props;
            return (
                <VolunteerRegisterForm onSubmit={this._submitForm} />
         )
