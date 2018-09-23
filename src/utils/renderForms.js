@@ -9,7 +9,7 @@ import 'react-select/dist/react-select.css';
 export const renderField = (field) => {
   let { label, disabled, input: { value }, meta: { touched, error } } = field;
   let cssMainClassName = field.cssMainClassName ? `${field.cssMainClassName} b-field` : 'b-field',
-    manualError = field.manualHasError ? 'has-error' : '';
+    manualError = field.manualHasError ? 'c-field--error' : '';
 
   // if (field.type === 'dropdown') {
     // let dropdownOptions = field.parseOptions && field.options && field.labelName ? parsedOptions(field.options, field.labelName) : field.options && Object.keys(field.options).length > 0 ? field.options : {};
@@ -34,7 +34,7 @@ export const renderField = (field) => {
     return (
       <div className={`${cssMainClassName}`}>
         <label className="c-field c-field--choice b-control b-checkbox">
-          <input  {...field.input} type="checkbox" className="b-control__input" disabled={disabled ? disabled : null} aria-invalid={touched && error ? 'true' : 'false'} value={field.defaultValue ? field.defaultValue : value} onChange={field.input.onChange} />
+          <input  {...field.input} type="checkbox" className={`b-control__input ${touched && error ? 'c-field--error' : ''}`} disabled={disabled ? disabled : null} aria-invalid={touched && error ? 'true' : 'false'} value={field.defaultValue ? field.defaultValue : value} onChange={field.input.onChange} />
           <span className="b-control__indicator" />
           {field.terms ?
             <span className="b-control__label">
@@ -58,7 +58,7 @@ export const renderField = (field) => {
           type={field.type}
           id={field.id}
           value={value}
-          className={"c-field b-field__input"}
+          className={`c-field b-field__input ${touched && error ? 'c-field--error' : ''}`}
           disabled={disabled ? disabled : null}
           aria-invalid={touched && error ? 'true' : 'false'}
         />
