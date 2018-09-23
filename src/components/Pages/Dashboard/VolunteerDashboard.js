@@ -13,7 +13,7 @@ class VolunteerDashboard extends Component {
     render() {
         return (
             <div className="b-page b-dashboard">
-                <h1 className="b-page__header">Overview</h1>
+                <h1 className="b-page__header">Baby Go Round Overview</h1>
 
                 <div className="b-dashboard__stats">
                     <div className="c-card">

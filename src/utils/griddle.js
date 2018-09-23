@@ -44,7 +44,7 @@ const pageSizeSettings = ({ pageSizes }, changeHandler) =>
   )(({ pageSize, onChange }) => {
     return (
       <label className="griddle-pagesize form-inline">
-        <span>Show</span>
+        <span className="sr-only">Show</span>
         <select onChange={onChange} defaultValue={pageSize} className="c-field">
           {pageSizes.map(s => <option key={s}>{s}</option>)}
         </select>
