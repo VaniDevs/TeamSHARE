@@ -38,15 +38,16 @@ class LoginForm extends Component {
     let { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="b-form b-form--padded">
 
         <Field component={renderField} name="email" id="name" type="email" label="Email" />
         <Field component={renderField} name="password" id="password" type="password" label="Password" />
 
-        <p>Forgot Password?</p>
-        <span className="c-input-group">
-          <button type="submit" className="c-button">Submit</button>
-        </span>
+        {/* <p>Forgot Password?</p> */}
+
+        <p style={{ marginTop: 50 }}><button type="submit" className="b-button b-button--brand c-button c-button--block">Submit</button></p>
+        
+
 
       </form>
     )

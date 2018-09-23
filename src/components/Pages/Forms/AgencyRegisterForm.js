@@ -59,7 +59,7 @@ class AgencyRegisterForm extends Component {
     let { handleSubmit } = this.props;
 
     return (
-      <form onSubmit={handleSubmit} className="l-two-column">
+      <form onSubmit={handleSubmit} className="l-two-column b-form b-form--padded">
         <fieldset className="o-fieldset">
           <legend className="o-fieldset__legend">Agency Information</legend>
           <Field component={renderField} name="agencyName" id="agencyName" type="text" label="Name of Agency" cssMainClassName="" />

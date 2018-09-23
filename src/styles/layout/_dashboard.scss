@@ -60,3 +60,43 @@ body {
     height: 50px;
   }
 }
+
+.l-outside-page {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100vh;
+  height: 100%;
+}
+
+// Login / Register
+
+.b-outside-page {
+    // padding: span(1);
+    flex: 1 1 100%;
+    justify-content: center;
+    background-color: #fff;
+
+  @media (min-width: 768px) {
+    padding: span(1);
+    flex: 0 1 85%;
+    
+  }
+
+  @media (min-width: 1280px) {
+    padding: span(1);
+    flex: 0 1 65%;
+  }  
+
+  &__main {
+    display: flex;
+  }
+
+  &__splash {
+    flex: 1;
+    background-color: $brand-lightgray;
+  }
+
+  .b-header__logo {
+    margin-bottom: span(2);
+  }
+}
