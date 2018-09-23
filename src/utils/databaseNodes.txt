@@ -35,7 +35,7 @@ agencyClients: {
 
 allUsers: {
     $uid: {
-        type: agency_emp, bgr_volunteer, bgr_manager
+        type: agencyEmp, BGRVolunteer, BGRManager
         agency: (if it is an agency_emp)
         createdOn:
         status: 'active'

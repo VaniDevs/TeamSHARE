@@ -2,7 +2,8 @@ import {
     REGISTER_FIREBASE_USER,
     LOGIN_FIREBASE_USER,
     LOGOUT_FIREBASE_USER,
-    FETCH_FIREBASE_USER
+    FETCH_FIREBASE_USER,
+    FETCH_USER_INFO
 } from './types';
 import { firebaseAuth, firebaseEmailAuthProvider, firebaseDb, configType } from '../utils/firebase';
 
@@ -43,6 +44,15 @@ export function logoutUser(user) {
 }
 
 
+export function fetchUserInfo(uid) {
+    let request = firebaseDb.ref(`/allUsers/${uid}`).once('value').then(snap => snap.val());
+    return {
+        type: FETCH_USER_INFO,
+        payload: request
+    }
+}
+
+
 const FireBaseTools = {
     /**
      * Register a user with email and password
@@ -65,7 +75,7 @@ const FireBaseTools = {
                         name = user.agent && user.agent.name ? user.agent.name : null;
                         let agencyId = firebaseDb.ref(`agency/`).push().key;
                         updates[`allUsers/${uid}`] = {
-                            type,
+                            type: 'agencyEmp',
                             agencyId,
                             createdOn: today,
                             status: 'active'
@@ -95,7 +105,7 @@ const FireBaseTools = {
                             createdOn: today
                         }
                         updates[`allUsers/${uid}`] = {
-                            type,
+                            type: 'agencyEmp',
                             createdOn: new Date(),
                             status: 'active'
                         };
@@ -108,7 +118,7 @@ const FireBaseTools = {
                             availability: null
                         }
                         updates[`allUsers/${uid}`] = {
-                            type,
+                            type: 'BGRVolunteer',
                             createdOn: new Date(),
                             status: 'active'
                         };
@@ -117,7 +127,7 @@ const FireBaseTools = {
                     case 'admin': {
                         // not implementing right now
                         updates[`allUsers/${uid}`] = {
-                            type,
+                            type: 'BGRManager',
                             createdOn: new Date(),
                             status: 'active'
                         };
@@ -161,7 +171,7 @@ const FireBaseTools = {
             reject(error);
         });
     }).then(user => {
-        return firebaseDb.ref(`/allUsers/${user.uid}`).once('value').then(snap => snap.val())
+        return user;
     }),
 
    /**
