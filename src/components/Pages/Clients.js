@@ -74,6 +74,17 @@ class Clients extends Component {
                     <p key={index}>{demographic[item].label}</p>
                 ))}</span>
               })
+
+              const statusComponent = EnhanceWithRowData(props => {
+                  let {rowData} = props;
+                  let status = rowData && rowData.status ? rowData.status : null;
+                  return status === 'pending'?
+                  <div style={{padding: 0, margin: 0}} role="alert" class="c-alert c-alert--warning">Pending</div>
+                  :
+                  status === 'approved' ?
+                  <div style={{padding: 0, margin: 0}} role="alert" class="c-alert c-alert--success">Approved</div>
+                  : null
+              })
           
         return (
             <div className="b-page">
@@ -122,7 +133,7 @@ class Clients extends Component {
                         <ColumnDefinition id="name" title="Name" />
                         <ColumnDefinition id="demographic" title="Demographic" customComponent={demographicComponent} />
                         <ColumnDefinition id="agency" title="agency" />
-                        <ColumnDefinition id="status" title="status" />
+                        <ColumnDefinition id="status" title="status" customComponent={statusComponent}/>
                         <ColumnDefinition id="numItemsRequested" title="# Items Requested" />
                         {/* <ColumnDefinition id="appointmentDate" title="Appointment Date" /> */}
                         <ColumnDefinition id="lastVisited" title="Last Visited" />

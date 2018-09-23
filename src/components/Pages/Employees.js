@@ -46,7 +46,12 @@ class Employees extends Component {
                     components={{ Filter, Layout: GriddleLayout }}
                     styleConfig={{
                         classNames: {
-                            Table: "griddle-table b0 table table-striped table-hover dataTable  ",
+                            Table: "griddle-table c-table c-table--striped",
+                            TableHeading: 'griddle-table-heading c-table__head',
+                            TableHeadingCell: 'griddle-table-heading-cell c-table__cell',
+                            TableBody: 'griddle-table-body c-table__body',
+                            Row: 'griddle-row c-table__row  c-table__row--clickable',
+                            Cell: 'griddle-cell c-table__cell',
                             PageDropdown: 'griddle-page-select form-control',
                             NextButton: "griddle-next-button btn",
                             Pagination: "griddle-pagination pull-right",
