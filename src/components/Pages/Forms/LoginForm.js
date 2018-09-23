@@ -41,7 +41,7 @@ class LoginForm extends Component {
       <form onSubmit={handleSubmit}>
 
         <Field component={renderField} name="email" id="name" type="email" label="Email" />
-        <Field component={renderField} name="password" id="name" type="password" label="Password" />
+        <Field component={renderField} name="password" id="password" type="password" label="Password" />
 
         <button type="submit">Submit</button>
       </form>

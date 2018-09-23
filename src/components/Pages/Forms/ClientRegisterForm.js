@@ -118,6 +118,10 @@ class ClientRegisterForm extends Component {
         </fieldset>
 
         <button type="submit">Register</button>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> feat-calendar
       </form>
     )
   }
