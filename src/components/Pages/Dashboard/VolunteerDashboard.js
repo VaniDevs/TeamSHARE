@@ -102,8 +102,8 @@ class VolunteerDashboard extends Component {
                     </div>
 
                     <div class="c-card">
-                        <div role="separator" class="c-card__item c-card__item--divider">Inventory Stock</div>
-                        <div class="c-card__body">
+                        <div role="separator" class="c-card__item c-card__item--divider">Keep up the good work</div>
+                        <div class="c-card__item">
                             <Graph />
                         </div>
                     </div>
