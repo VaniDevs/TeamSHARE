@@ -5,7 +5,10 @@ class NewClient extends Component {
 
     render() {
         return (
-            <ClientRegister />
+            <div className="u-center-block l-center-container b-page">
+                <h1 className="b-page__header">Client Registration</h1>
+                <ClientRegister />
+            </div>            
         )
     }
 }

@@ -1,6 +1,13 @@
-.b-field {
+.b-field, 
+.b-field--react-select {
   margin-bottom: 15px;
+}
 
+.b-field--react-select {
+  display: block;
+}
+
+.b-field {
   &__label {
     display: block;
     margin-bottom: gutter()/2;
@@ -16,7 +23,7 @@
 .o-fieldset__legend {
   font-family: $head-type;
   font-size: 1.1em;
-  margin-bottom: gutter()*2;
+  margin: gutter()*2 0 gutter();
 }
 
 .b-button--brand {
