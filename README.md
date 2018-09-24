@@ -13,8 +13,11 @@ http://share-babygoround.firebaseapp.com/login
 
 ## Login
 
-`1@volunteer.com`
-`qwerty`
+```
+1@volunteer.com 
+1@agent.com
+qwerty
+```
 
 ## Running Instructions
 
