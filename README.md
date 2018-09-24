@@ -7,7 +7,11 @@ http://vanhacks.com/
 
 The app we built has two different dashboard views. The agency dashboard where a social worker working for the agency can see all the clients, add new clients and view other staff members or the agency profile. The client once created will be added to a clients list which a volunteer can login to approve. The volunteer dashboard has stats listed on it to indicate the number of families helped this month, number of hours volunteered and number of items donated. The volunteers can look up agencies, clients and manage their inventory from their dashboard. 
 
-### Running Instructions
+## Links
+
+http://share-babygoround.firebaseapp.com
+
+## Running Instructions
 
 Install the node modules
 `npm install`
