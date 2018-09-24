@@ -9,7 +9,12 @@ The app we built has two different dashboard views. The agency dashboard where a
 
 ## Links
 
-http://share-babygoround.firebaseapp.com
+http://share-babygoround.firebaseapp.com/login
+
+## Login
+
+`1@volunteer.com`
+`qwerty`
 
 ## Running Instructions
 
